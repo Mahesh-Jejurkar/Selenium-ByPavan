@@ -13,7 +13,6 @@ public class Alert1 {
 
 	public static void main(String[] args) throws Exception {
 		WebDriverManager.chromedriver().setup();
-		System.setProperty("webdriver.http.factory", "jdk-http-client");
 
 		WebDriver driver = new ChromeDriver();
 		JavascriptExecutor js = (JavascriptExecutor) driver;

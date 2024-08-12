@@ -1,4 +1,7 @@
 package selenium;
+
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,10 +14,10 @@ public class DragAndDrop {
 
 	public static void main(String[] args) throws Exception {
 		WebDriverManager.chromedriver().setup();
-		System.setProperty("webdriver.http.factory", "jdk-http-client");
-		
+
 		WebDriver driver = new ChromeDriver();
-		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+
 		driver.manage().window().maximize();
 		driver.get("http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html");
 		Thread.sleep(5000);
@@ -26,9 +29,7 @@ public class DragAndDrop {
 		WebElement Seoul = driver.findElement(By.xpath("//*[@id='box5']"));
 		WebElement Rome = driver.findElement(By.xpath("//*[@id='box6']"));
 		WebElement Madrid = driver.findElement(By.xpath("//*[@id='box7']"));
-		
-		
-		
+
 		WebElement Norway = driver.findElement(By.xpath("//*[@id='box101']"));
 		WebElement Sweden = driver.findElement(By.xpath("//*[@id='box102']"));
 		WebElement US = driver.findElement(By.xpath("//*[@id='box103']"));
@@ -36,11 +37,10 @@ public class DragAndDrop {
 		WebElement SouthKorea = driver.findElement(By.xpath("//*[@id='box105']"));
 		WebElement Italy = driver.findElement(By.xpath("//*[@id='box106']"));
 		WebElement Spain = driver.findElement(By.xpath("//*[@id='box107']"));
-		
 
 		Actions act = new Actions(driver);
-		//act.clickAndHold(Source).moveToElement(target).release().build().perform();
-		
+		// act.clickAndHold(Source).moveToElement(target).release().build().perform();
+
 		act.dragAndDrop(Rome, Italy).build().perform();
 		act.dragAndDrop(Madrid, Spain).build().perform();
 		act.dragAndDrop(Oslo, Norway).build().perform();
@@ -48,7 +48,7 @@ public class DragAndDrop {
 		act.dragAndDrop(Seoul, SouthKorea).build().perform();
 		act.dragAndDrop(Stockholm, Sweden).build().perform();
 		act.dragAndDrop(Washington, US).build().perform();
-		
+
 		Thread.sleep(5000);
 		driver.close();
 	}

@@ -1,5 +1,7 @@
 package selenium;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -14,33 +16,35 @@ public class ActionClass_KeyboardEvent {
 
 	public static void main(String[] args) throws Exception {
 		WebDriverManager.chromedriver().setup();
-		System.setProperty("webdriver.http.factory", "jdk-http-client");
-		
+
 		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		Actions act = new Actions(driver);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		
+
 		driver.manage().window().maximize();
 		driver.get("https://extendsclass.com/text-compare.html");
 		Thread.sleep(2000);
-		
+
 		WebElement targetText = driver.findElement(By.xpath("//*[@id='dropZone2']/div[2]/div/div[6]/div[1]"));
 		act.keyDown(targetText, Keys.CONTROL).sendKeys("a").sendKeys("delete");
-		
+
 		Thread.sleep(2000);
-		
-		WebElement sourceText = driver.findElement(By.xpath("//*[@id=\"dropZone\"]/div[2]/div/div[6]/div[1]/div/div/div/div[5]"));
+
+		WebElement sourceText = driver
+				.findElement(By.xpath("//*[@id=\"dropZone\"]/div[2]/div/div[6]/div[1]/div/div/div/div[5]"));
 		act.keyDown(sourceText, Keys.CONTROL).sendKeys("a").sendKeys("c").build().perform();
-		
+
 		Thread.sleep(2000);
-		
+
 		act.keyDown(targetText, Keys.CONTROL).sendKeys("v").build().perform();
-		
+
 		Thread.sleep(2000);
 		WebElement textCmp = driver.findElement(By.xpath("//*[@id='nb-diff']"));
-		js.executeScript("arguments[0].scrollIntoView();", textCmp);
-		
-		Thread.sleep(3000);
+		js.executeScript("arguments[0].scrollIntoView(true);", textCmp);
+		System.out.println(textCmp.getText());
+
+		Thread.sleep(5000);
 		driver.close();
 	}
 }

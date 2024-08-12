@@ -13,41 +13,40 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 //@Listeners(LaunchGoogleListener.class)
 
 public class LaunchGoogle {
-	
+
 	WebDriver driver;
-	
+
 	@Test(priority = 0)
 	public void openBrowser() {
 		WebDriverManager.chromedriver().setup();
-		System.setProperty("webdriver.http.factory", "jdk-http-client");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		Reporter.log("Browser launched.");
 	}
-	
-	@Test (priority = 1)
-	public void launchGoogle() {
+
+	@Test(priority = 1)
+	public void launchApplication() throws Exception {
+		Thread.sleep(2000);
 		driver.get("http://www.google.co.in");
 		Reporter.log("Google searched.");
 	}
-	
-	@Test (priority = 2)
+
+	@Test(priority = 2)
 	public void searchAndClick() throws Exception {
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//*[@title = 'Search']")).sendKeys("Facebook", Keys.ENTER);
-		//driver.findElement(By.xpath("//*[@value = 'Google Search']")).click();
 		Reporter.log("The text Facebook typed.");
 	}
-	
-	@Test (priority = 3)
+
+	@Test(priority = 3)
 	public void verifyPageTitle() throws Exception {
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		String title = driver.getTitle();
 		Assert.assertEquals(title, "Facebook - Google Search", "Title Matched.");
 		Reporter.log("Title verified.");
 	}
-	
-	@Test (priority = 4)
+
+	@Test(priority = 4)
 	public void closeBrowser() throws Exception {
 		Thread.sleep(5000);
 		driver.close();

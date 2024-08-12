@@ -1,4 +1,5 @@
 package selenium1;
+
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -20,15 +21,12 @@ public class WindowHandler_SeleniumStudy4 {
 	public static void main(String[] args) throws Exception {
 		if (browser.equals("Chrome")) {
 			WebDriverManager.chromedriver().setup();
-			System.setProperty("webdriver.http.factory", "jdk-http-client");
 			driver = new ChromeDriver();
 		} else if (browser.equals("Firefox")) {
 			WebDriverManager.firefoxdriver().setup();
-			System.setProperty("webdriver.http.factory", "jdk-http-client");
 			driver = new FirefoxDriver();
 		} else if (browser.equals("Edge")) {
 			WebDriverManager.edgedriver().setup();
-			System.setProperty("webdriver.http.factory", "jdk-http-client");
 			driver = new EdgeDriver();
 		}
 		driver.manage().window().maximize();
@@ -57,15 +55,15 @@ public class WindowHandler_SeleniumStudy4 {
 		driver.findElement(By.xpath("//*[@id='newWindowBtn']")).click();
 		Set<String> hyrWindowHandles = driver.getWindowHandles();
 		System.out.println(hyrWindowHandles);
-		
+
 		Iterator<String> itr = hyrWindowHandles.iterator();
-		while(itr.hasNext()) {
+		while (itr.hasNext()) {
 			System.out.println(itr.next());
 		}
 		Thread.sleep(5000);
 		driver.switchTo().window(hyrMainWindowHandle);
 		driver.findElement(By.xpath("//*[@id='name']")).sendKeys("mahesh");
-		
+
 		Thread.sleep(10000);
 		driver.quit();
 	}

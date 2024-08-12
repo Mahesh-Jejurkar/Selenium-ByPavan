@@ -1,6 +1,9 @@
 package selenium;
 
 import org.openqa.selenium.By;
+
+import java.time.Duration;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -15,6 +18,7 @@ public class Alert1 {
 		WebDriverManager.chromedriver().setup();
 
 		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
 		driver.manage().window().maximize();

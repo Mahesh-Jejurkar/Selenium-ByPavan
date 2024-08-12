@@ -15,7 +15,6 @@ public class Wait_FluentWaitDemo {
 
 	public static void main(String[] args) throws Exception {
 		WebDriverManager.chromedriver().setup();
-		System.setProperty("webdriver.http.factory", "jdk-http-client");
 
 		WebDriver driver = new ChromeDriver();
 

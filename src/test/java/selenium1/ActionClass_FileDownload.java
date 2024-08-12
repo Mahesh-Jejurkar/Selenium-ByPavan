@@ -6,12 +6,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class ActionClass_FileDownload {
 
 	public static void main(String[] args) throws Exception {
-		System.setProperty("webdriver.chrome.driver",
-		System.getProperty("user.dir") + "//browser-driver//chromedriver.exe");
-		System.setProperty("webdriver.http.factory", "jdk-http-client");
+		WebDriverManager.chromedriver().setup();
 
 		WebDriver driver = new ChromeDriver();
 		Actions act = new Actions(driver);

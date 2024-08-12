@@ -9,9 +9,9 @@ import org.testng.annotations.Test;
 
 public class TestNGTestOne {
 
-	public String browserPath = System.getProperty("user.dir")+"\\browser-driver\\geckodriver.exe";
+	public String browserPath = System.getProperty("user.dir") + "\\browser-driver\\geckodriver.exe";
 	public WebDriver driver;
-	
+
 	@BeforeTest
 	public void setBrowser() {
 		System.setProperty("webdriver.gecko.driver", browserPath);
@@ -19,13 +19,13 @@ public class TestNGTestOne {
 		driver.manage().window().maximize();
 		driver.get("https://demo.guru99.com/test/newtours/");
 	}
-	
+
 	@AfterTest
 	public void endSession() throws Exception {
 		Thread.sleep(5000);
 		driver.quit();
 	}
-	
+
 	@Test
 	public void verifyHomePage() {
 		String expectedTitle = "Welcome: Mercury Tours";

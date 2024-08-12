@@ -7,7 +7,7 @@ public class Payment {
 	public void paymentInDoller() {
 		System.out.println("This is payment by doller method...");
 	}
-	
+
 	@Test(groups = "Sanity")
 	public void paymentInRupees() {
 		System.out.println("This is payment by rupees method...");

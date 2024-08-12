@@ -16,10 +16,8 @@ public class Alert2 {
 	public static void main(String[] args) throws Exception {
 		System.setProperty("webdriver.http.factory", "jdk-http-client");
 		WebDriverManager.chromedriver().setup();
-		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//BrowserDriver//chromedriver.exe");
 		
 		WebDriver driver = new ChromeDriver();
-		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		
 		driver.manage().window().maximize();
@@ -27,9 +25,6 @@ public class Alert2 {
 		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text()='Alert with OK ']"))).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains (text(),'click the button to display an')]"))).click();
-		
-		//driver.findElement(By.linkText("Alert with OK")).click();
-		//driver.findElement(By.xpath("//*[@id='OKTab']/button")).click();
 		
 		Alert a = driver.switchTo().alert();
 		Thread.sleep(2000);

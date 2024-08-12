@@ -11,16 +11,15 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class MouseHover1 {
 
 	public static void main(String[] args) throws Exception {
-		System.setProperty("webdriver.http.factory", "jdk-http-client");
 		WebDriverManager.chromedriver().setup();
-		
+
 		WebDriver driver = new ChromeDriver();
 		Actions act = new Actions(driver);
-		
+
 		driver.manage().window().maximize();
 		driver.get("https://demo.guru99.com/test/newtours/index.php");
 		Thread.sleep(2000);
-		
+
 		WebElement home = driver.findElement(By.xpath("//a[text()='Home']"));
 		WebElement flights = driver.findElement(By.xpath("//a[text()='Flights']"));
 		WebElement hotels = driver.findElement(By.xpath("//a[text()='Hotels']"));
@@ -28,7 +27,7 @@ public class MouseHover1 {
 		WebElement cruises = driver.findElement(By.xpath("//a[text()='Cruises']"));
 		WebElement destinations = driver.findElement(By.xpath("//a[text()='Destinations']"));
 		WebElement vacations = driver.findElement(By.xpath("//a[text()='Vacations']"));
-		
+
 		act.moveToElement(home).perform();
 		Thread.sleep(1000);
 		act.moveToElement(flights).perform();
@@ -42,7 +41,7 @@ public class MouseHover1 {
 		act.moveToElement(destinations).perform();
 		Thread.sleep(1000);
 		act.moveToElement(vacations).perform();
-		
+
 		Thread.sleep(5000);
 		driver.close();
 

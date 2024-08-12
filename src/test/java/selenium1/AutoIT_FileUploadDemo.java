@@ -7,29 +7,29 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class AutoIT_FileUploadDemo {
 
 	public static void main(String[] args) throws Exception {
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//browser-driver//chromedriver.exe");
-		System.setProperty("webdriver.http.factory", "jdk-http-client");
-		
+		WebDriverManager.chromedriver().setup();
+
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		
+
 		Actions act = new Actions(driver);
-		
+
 		driver.get("https://demo.automationtesting.in/FileUpload.html");
 		Thread.sleep(2000);
 		System.out.println(driver.getTitle());
-		
+
 		WebElement browserFile = driver.findElement(By.xpath("//*[@id='input-4']"));
-		
+
 		act.moveToElement(browserFile).click().build().perform();
 		Thread.sleep(3000);
-		
-		Runtime.getRuntime().exec(System.getProperty("user.dir")+"//input-files//FileUpload.exe");
-		
-		
+
+		Runtime.getRuntime().exec(System.getProperty("user.dir") + "//input-files//FileUpload.exe");
+
 		Thread.sleep(10000);
 		driver.close();
 	}

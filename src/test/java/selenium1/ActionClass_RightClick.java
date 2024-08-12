@@ -1,4 +1,5 @@
 package selenium1;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -12,20 +13,18 @@ public class ActionClass_RightClick {
 
 	public static void main(String[] args) throws Exception {
 		WebDriverManager.chromedriver().setup();
-		System.setProperty("webdriver.http.factory", "jdk-http-client");
-		
+
 		WebDriver driver = new ChromeDriver();
 		Actions act = new Actions(driver);
 		driver.manage().window().maximize();
-		
+
 		driver.get("https://demo.automationtesting.in/Register.html");
 		Thread.sleep(2000);
-		
+
 		WebElement home = driver.findElement(By.xpath("//*[text()='Home']"));
 		act.contextClick(home).sendKeys(Keys.ARROW_RIGHT).sendKeys(Keys.ENTER).build().perform();
 
-		
-		Thread.sleep(8000);
+		Thread.sleep(5000);
 		driver.close();
 	}
 }

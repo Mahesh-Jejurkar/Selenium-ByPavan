@@ -17,10 +17,9 @@ public class ClickOperation {
 	
 	public static void main(String[] args) throws Exception {
 		WebDriverManager.chromedriver().setup();
-		System.setProperty("webdriver.http.factory", "jdk-http-client");
 		
 		WebDriver driver = new ChromeDriver();
-		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		Actions act = new Actions(driver);
 		Robot rbt = new Robot();

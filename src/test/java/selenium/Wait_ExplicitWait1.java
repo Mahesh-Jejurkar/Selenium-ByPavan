@@ -16,22 +16,22 @@ public class Wait_ExplicitWait1 {
 
 	public static void main(String[] args) throws Exception {
 		WebDriverManager.chromedriver().setup();
-		System.setProperty("webdriver.http.factory", "jdk-http-client");
-		
+
 		WebDriver driver = new ChromeDriver();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		Actions act = new Actions(driver);
-		
+
 		driver.manage().window().maximize();
 		driver.get("https://www.ebay.com/");
-		
+
 		WebElement electronics = driver.findElement(By.xpath("//*[@id='vl-flyout-nav']/ul/li[2]/a"));
 		act.moveToElement(electronics).perform();
-		
-		WebElement apple = driver.findElement(By.xpath("//*[@id='vl-flyout-nav']/ul/li[2]/div[2]/div[1]/nav[2]/ul/li[1]/a"));
-		
+
+		WebElement apple = driver
+				.findElement(By.xpath("//*[@id='vl-flyout-nav']/ul/li[2]/div[2]/div[1]/nav[2]/ul/li[1]/a"));
+
 		wait.until(ExpectedConditions.visibilityOf(apple)).click();
-		
+
 		Thread.sleep(5000);
 		driver.close();
 

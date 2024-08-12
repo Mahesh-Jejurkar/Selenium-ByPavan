@@ -7,14 +7,15 @@ public class TestNGTestFour {
 	public void signupByEmail() {
 		System.out.println("This is Sign Up by EMail...");
 	}
-	
+
 	@Test
 	public void signupByFacebook() {
 		System.out.println("This is Sign Up by Facebook...");
 	}
+
 	@Test
 	public void signupByTwitter() {
 		System.out.println("This is Sign Up by Twitter...");
 	}
-	
+
 }

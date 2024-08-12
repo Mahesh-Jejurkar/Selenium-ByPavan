@@ -14,21 +14,20 @@ public class Wait_ImplicitWait1 {
 
 	public static void main(String[] args) throws Exception {
 		WebDriverManager.chromedriver().setup();
-		System.setProperty("webdriver.http.factory", "jdk-http-client");
-		
+
 		WebDriver driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		Actions act = new Actions(driver);
-		
+
 		driver.manage().window().maximize();
-		
+
 		driver.get("https://www.ebay.com/");
-		
+
 		WebElement electronics = driver.findElement(By.xpath("//*[@id='vl-flyout-nav']/ul/li[2]/a"));
 		act.moveToElement(electronics).perform();
-		
+
 		driver.findElement(By.xpath("//*[@id='vl-flyout-nav']/ul/li[2]/div[2]/div[1]/nav[2]/ul/li[1]/a")).click();
-		
+
 		Thread.sleep(5000);
 		driver.close();
 	}

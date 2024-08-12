@@ -6,7 +6,7 @@ public class Study03ArrayList {
 
 	public static void main(String[] args) {
 		ArrayList<String> at = new ArrayList<String>();
-		System.out.println(at.size()+" => "+at);
+		System.out.println(at.size() + " => " + at);
 		at.add("M");
 		at.add("A");
 		at.add("H");
@@ -14,22 +14,21 @@ public class Study03ArrayList {
 		at.add("S");
 		at.add("H");
 
-		
-		System.out.println(at.size()+" => "+at);
-		
+		System.out.println(at.size() + " => " + at);
+
 		at.remove(1);
-		System.out.println(at.size()+" => "+at);
-		
+		System.out.println(at.size() + " => " + at);
+
 		at.remove("H");
-		System.out.println(at.size()+" => "+at);
-		
+		System.out.println(at.size() + " => " + at);
+
 		at.remove("H");
-		System.out.println(at.size()+" => "+at);
-		
+		System.out.println(at.size() + " => " + at);
+
 		at.remove("1");
-		System.out.println(at.size()+" => "+at);
-		
+		System.out.println(at.size() + " => " + at);
+
 		at.remove("K");
-		System.out.println(at.size()+" => "+at);
+		System.out.println(at.size() + " => " + at);
 	}
 }

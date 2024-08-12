@@ -1,4 +1,6 @@
 package selenium;
+import java.time.Duration;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,9 +12,9 @@ public class Alert4 {
 
 	public static void main(String[] args) throws Exception {
 		WebDriverManager.chromedriver().setup();	
-		System.setProperty("webdriver.http.factory", "jdk-http-client");
 		
 		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		
 		driver.manage().window().maximize();
 		driver.get("https://demo.automationtesting.in/Alerts.html");

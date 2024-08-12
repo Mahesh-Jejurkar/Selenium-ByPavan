@@ -1,4 +1,5 @@
 package selenium;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -15,11 +16,11 @@ public class DropDown {
 
 	public static void main(String[] args) throws Exception {
 		WebDriverManager.chromedriver().setup();
-		System.setProperty("webdriver.http.factory", "jdk-http-client");
+
 		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+
 		driver.manage().window().maximize();
-		
-		
 		driver.get("https://testautomationpractice.blogspot.com/");
 		
 		WebElement dropdown = driver.findElement(By.xpath("//*[@id='animals']"));

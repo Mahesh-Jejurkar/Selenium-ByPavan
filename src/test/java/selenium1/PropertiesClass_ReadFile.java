@@ -19,7 +19,6 @@ public class PropertiesClass_ReadFile {
 		String input_url = p.getProperty("url");
 
 		WebDriverManager.chromedriver().setup();
-		System.setProperty("webdriver.http.factory", "jdk-http-client");
 
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();

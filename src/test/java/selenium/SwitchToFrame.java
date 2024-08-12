@@ -10,18 +10,16 @@ public class SwitchToFrame {
 
 	public static void main(String[] args) throws Exception {
 		WebDriverManager.chromedriver().setup();
-		System.setProperty("webdriver.http.factory", "jdk-http-client");
-		
+
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		
+
 		driver.get("https://demo.guru99.com/selenium/deprecated.html");
 		Thread.sleep(3000);
 		driver.switchTo().frame("classFrame");
 		driver.findElement(By.xpath("//*[text()='Deprecated']")).click();
-		
-		
-		Thread.sleep(3000);
+
+		Thread.sleep(5000);
 		driver.quit();
 	}
 }

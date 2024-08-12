@@ -1,4 +1,5 @@
 package selenium1;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,24 +12,22 @@ public class ActionClass_SliderDemo {
 
 	public static void main(String[] args) throws Exception {
 		WebDriverManager.chromedriver().setup();
-		System.setProperty("webdriver.http.factory", "jdk-http-client");
-		
+
 		WebDriver driver = new ChromeDriver();
 		Actions act = new Actions(driver);
 		driver.manage().window().maximize();
-		
+
 		driver.get("https://demo.automationtesting.in/ActionClass_SliderDemo.html");
 		Thread.sleep(2000);
-		
+
 		WebElement slider = driver.findElement(By.xpath("//*[@id='slider']/a"));
-		
-		for(int i=0; i<100; i++) {
+
+		for (int i = 0; i < 100; i++) {
 			act.dragAndDropBy(slider, i, 0).build().perform();
-			System.out.print(i+"\t");
+			System.out.print(i + "\t");
 			Thread.sleep(500);
 		}
-		
-		
+
 		Thread.sleep(5000);
 		driver.close();
 	}

@@ -6,16 +6,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-
 public class TestNGTestTwo {
-	String driverPath = System.getProperty("user.dir")+"//browser-driver//geckodriver.exe";
+	String driverPath = System.getProperty("user.dir") + "//browser-driver//geckodriver.exe";
 	String webURL = "https://demo.guru99.com/test/newtours/index.php";
 	public WebDriver driver;
 	public String expectedTitle = null;
 	public String actualTitle = null;
-	
-	
-	
+
 	@BeforeTest
 	public void lanuchBrowser() {
 		System.out.println("Launching firfox browser...");
@@ -30,7 +27,7 @@ public class TestNGTestTwo {
 		Thread.sleep(5000);
 		driver.close();
 	}
-	
+
 	@BeforeMethod
 	public void verifyHomePageTitle() throws Exception {
 		Thread.sleep(5000);
@@ -38,14 +35,13 @@ public class TestNGTestTwo {
 		String actualTitle = driver.getTitle();
 		Assert.assertEquals(actualTitle, expectedTitle);
 	}
-	
+
 	@AfterMethod
 	public void goBackToHomePage() throws Exception {
 		Thread.sleep(2000);
 		driver.findElement(By.linkText("Home")).click();
 	}
-	
-			
+
 	@Test(priority = 0)
 	public void register() throws Exception {
 		Thread.sleep(2000);
@@ -54,8 +50,8 @@ public class TestNGTestTwo {
 		actualTitle = driver.getTitle();
 		Assert.assertEquals(actualTitle, expectedTitle);
 	}
-	
-	@Test (priority = 1)
+
+	@Test(priority = 1)
 	public void support() throws Exception {
 		Thread.sleep(2000);
 		driver.findElement(By.linkText("SUPPORT")).click();

@@ -8,7 +8,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class GetCommands {
 
 	public static void main(String[] args) {
-		System.setProperty("webdriver.http.factory", "jdk-http-client");
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -20,5 +19,4 @@ public class GetCommands {
 		System.out.println(text);
 		driver.quit();
 	}
-
 }

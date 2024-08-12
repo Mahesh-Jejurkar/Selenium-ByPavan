@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="datadriventesting.DataProvider1">
+      <class name="testNG.LaunchGoogle">
         <methods>
-          <include name="testCaseData"/>
+          <include name="verifyPageTitle"/>
         </methods>
-      </class> <!-- datadriventesting.DataProvider1 -->
+      </class> <!-- testNG.LaunchGoogle -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -11,10 +11,10 @@ public class BasicAuth {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		//driver.get("https://the-internet.herokuapp.com/basic_auth");
-		
+		// driver.get("https://the-internet.herokuapp.com/basic_auth");
+
 		driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
-		
+
 		Thread.sleep(3000);
 		driver.close();
 	}

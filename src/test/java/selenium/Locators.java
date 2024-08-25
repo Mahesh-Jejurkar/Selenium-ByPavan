@@ -1,9 +1,10 @@
 package selenium;
 
 import java.time.Duration;
+import java.util.Iterator;
+import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,23 +21,40 @@ public class Locators {
 		WebDriverManager.chromedriver().setup();
 
 		WebDriver driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5000));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(9000));
 
 		driver.manage().window().maximize();
-		driver.get("https://demo.automationtesting.in/Register.html");
-		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-
-		/*
-		 * driver.findElement(By.xpath("//*[@id='submitbtn']")).click();
-		 * driver.findElement(By.cssSelector("#submitbtn")).click();
-		 * driver.findElement(By.linkText("WebTable")).click(); Thread.sleep(2000);
-		 * driver.findElement(By.partialLinkText("Intera")).click(); Thread.sleep(2000);
-		 * driver.findElement(By.partialLinkText("Resi")).click();
-		 */
-		WebElement LastName = driver.findElement(By.xpath("//*[@placeholder='Last Name']"));
-
+		driver.get("https://tutorialsninja.com/demo/");
+		//driver.get("https://tutorialsninja.com/demo/index.php?route=account/register");
 		Thread.sleep(2000);
+		
+		/*
+		 * //ID driver.findElement(By.id("input-firstname")).sendKeys("Mahesh");
+		 * Thread.sleep(2000); //Name
+		 * driver.findElement(By.name("lastname")).sendKeys("Jejurkar");
+		 * Thread.sleep(2000); //LinkText
+		 * driver.findElement(By.linkText("Login")).click(); Thread.sleep(2000);
+		 * //PartialLinkText driver.findElement(By.partialLinkText("Reg")).click();
+		 * Thread.sleep(2000); //ClassName
+		 * driver.findElements(By.className("list-group-item")).get(0).click();
+		 */
+		
+		List<WebElement> headerLinks =	driver.findElements(By.className("dropdown"));
+		Iterator<WebElement> it = headerLinks.iterator();
+		System.out.println("Header Links : ");
+		while(it.hasNext()) {
+		System.out.println(it.next().getText());
+		}
+		
+		int totalImg = driver.findElements(By.tagName("img")).size();
+		System.out.println("Total no. of images : "+totalImg);
+		
+		int totalLinks = driver.findElements(By.tagName("a")).size();
+		System.out.println("Total no. of links : "+totalLinks);
+		
+		System.out.println(driver.findElement(By.tagName("img")).getAttribute("title"));
+		
+		Thread.sleep(5000);
 		driver.close();
 
 	}

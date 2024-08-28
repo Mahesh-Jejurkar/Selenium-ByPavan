@@ -5,12 +5,15 @@ import java.time.Duration;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
 
 public class BaseClass{
 	
 	public static WebDriver driver;
 	public static Wait<WebDriver> myFluentWait;
+	public static Actions action;
+	public static JavascriptExecutor js;
 
 	public static WebDriver getDriver() throws Exception {
 		driver = new ChromeDriver();
@@ -34,8 +37,13 @@ public class BaseClass{
 	}
 	
 	public static JavascriptExecutor getJS() {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js = (JavascriptExecutor) driver;
 		return js;
+	}
+	
+	public static Actions getActions() {
+		action = new Actions(driver);
+		return action;
 	}
 
 	public static void closeDriver() throws Exception {

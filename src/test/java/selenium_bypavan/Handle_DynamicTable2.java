@@ -2,6 +2,7 @@ package selenium_bypavan;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class Handle_DynamicTable2 extends BaseClass{
 
@@ -17,7 +18,11 @@ public class Handle_DynamicTable2 extends BaseClass{
 		driver.findElement(By.xpath("//ul[@class='oxd-main-menu']/li[1]/a")).click();
 		Thread.sleep(2000);
 		
+		WebElement table = driver.findElement(By.xpath("//div[@class='orangehrm-container']"));
+		getJS().executeScript("arguments[0].scrollIntoView(true);", table);
+		
 		int rowCount = driver.findElements(By.xpath("//div[@class='oxd-table']/div[2]/div")).size();
+		System.out.println("Total no. of records : "+rowCount);
 		
 		for(int r=1; r<=rowCount; r++) {
 			Thread.sleep(1000);

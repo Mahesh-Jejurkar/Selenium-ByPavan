@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-public class Assignment_5 extends BaseClass{
+public class Assignment_05 extends BaseClass{
 
 	public static void main(String[] args) throws Exception{
 		WebDriver driver = getDriver();

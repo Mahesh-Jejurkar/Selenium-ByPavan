@@ -4,7 +4,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class Handle_Alert extends BaseClass{
+public class AlertHandling extends BaseClass{
 	public static void main(String[] args) throws Exception {
 		WebDriver driver = getDriver();
 		driver.get("https://demo.automationtesting.in/Alerts.html");

@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class Handle_DynamicTable1 extends BaseClass {
+public class DynamicTable1 extends BaseClass {
 
 	public static void main(String[] args) throws Exception {
 		WebDriver driver = getDriver();

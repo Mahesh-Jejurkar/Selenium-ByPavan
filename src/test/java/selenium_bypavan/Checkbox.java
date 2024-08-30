@@ -3,6 +3,7 @@ package selenium_bypavan;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -10,10 +11,11 @@ public class Checkbox extends BaseClass {
 
 	public static void main(String[] args) throws Exception {
 		WebDriver driver = getDriver();
+		JavascriptExecutor js = getJavascriptExecutor();
 
 		driver.get("https://testautomationpractice.blogspot.com/");
 
-		getJS().executeScript("window.scrollTo(0, document.body.scrollHeight)");
+		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 		WebElement chk_sunday = driver.findElement(By.xpath("//*[@id='sunday']"));
 		System.out.println("Is sunday selected? : " + chk_sunday.isSelected());
 		chk_sunday.click();

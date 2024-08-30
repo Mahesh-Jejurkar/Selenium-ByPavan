@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,12 +14,14 @@ public class OpenLinkInNewTab extends BaseClass{
 
 	public static void main(String[] args) throws Exception{
 		WebDriver driver = getDriver();
+		JavascriptExecutor js = getJavascriptExecutor();
+		
 		Actions act = new Actions(driver);
 		
 		driver.get("https://testautomationpractice.blogspot.com/");
 		Thread.sleep(2000);
 		WebElement link_hrm = driver.findElement(By.xpath("//a[text()='orange HRM']"));
-		getJS().executeScript("arguments[0].scrollIntoView(true)", link_hrm);
+		js.executeScript("arguments[0].scrollIntoView(true)", link_hrm);
 		Thread.sleep(1000);
 		
 		//act.keyDown(Keys.CONTROL).moveToElement(link_hrm).click().keyUp(Keys.CONTROL).build().perform();

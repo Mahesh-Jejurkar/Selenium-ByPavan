@@ -1,6 +1,7 @@
 package selenium_bypavan;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -8,10 +9,11 @@ public class StaticTable extends BaseClass {
 
 	public static void main(String[] args) throws Exception {
 		WebDriver driver = getDriver();
+		JavascriptExecutor js = getJavascriptExecutor();
 		driver.get("https://testautomationpractice.blogspot.com/");
 		Thread.sleep(2000);
 		WebElement txt_webtable = driver.findElement(By.xpath("//h2[text()='Web Table']"));
-		getJS().executeScript("arguments[0].scrollIntoView(true);", txt_webtable);
+		js.executeScript("arguments[0].scrollIntoView(true);", txt_webtable);
 
 		WebElement table_book = driver.findElement(By.xpath("//table[@name='BookTable']"));
 
@@ -27,11 +29,11 @@ public class StaticTable extends BaseClass {
 		for (int r = 2; r <= row; r++) {
 			for (int c = 1; c <= column; c++) {
 				WebElement el_data = table_book.findElement(By.xpath("//tr[" + r + "]//td[" + c + "]"));
-				String originalColor = (String) getJS()
+				String originalColor = (String) js
 						.executeScript("return window.getComputedStyle(arguments[0]).backgroundColor;", el_data);
-				getJS().executeScript("arguments[0].style.backgroundColor='green'", el_data);
+				js.executeScript("arguments[0].style.backgroundColor='green'", el_data);
 				Thread.sleep(1000);
-				getJS().executeScript("arguments[0].style.backgroundColor=arguments[1]", el_data, originalColor);
+				js.executeScript("arguments[0].style.backgroundColor=arguments[1]", el_data, originalColor);
 				String data = el_data.getText();
 				System.out.print(data + "\t");
 			}
@@ -49,11 +51,11 @@ public class StaticTable extends BaseClass {
 				String data = el_data.getText();
 				System.out.print(data + "\t");
 
-				String originalColor = (String) getJS()
+				String originalColor = (String) js
 						.executeScript("return window.getComputedStyle(arguments[0]).backgroundColor;", el_data);
-				getJS().executeScript("arguments[0].style.backgroundColor='green'", el_data);
+				js.executeScript("arguments[0].style.backgroundColor='green'", el_data);
 				Thread.sleep(500);
-				getJS().executeScript("arguments[0].style.backgroundColor=arguments[1]", el_data, originalColor);
+				js.executeScript("arguments[0].style.backgroundColor=arguments[1]", el_data, originalColor);
 			}
 			System.out.println();
 		}
@@ -67,11 +69,11 @@ public class StaticTable extends BaseClass {
 			String price = we_price.getText();
 			totalPrice = totalPrice + Integer.parseInt(price);
 
-			String originalColor = (String) getJS()
+			String originalColor = (String) js
 					.executeScript("return window.getComputedStyle(arguments[0]).backgroundColor;", we_price);
-			getJS().executeScript("arguments[0].style.backgroundColor='green'", we_price);
+			js.executeScript("arguments[0].style.backgroundColor='green'", we_price);
 			Thread.sleep(500);
-			getJS().executeScript("arguments[0].style.backgroundColor=arguments[1]", we_price, originalColor);
+			js.executeScript("arguments[0].style.backgroundColor=arguments[1]", we_price, originalColor);
 		}
 		System.out.println("Total price of all the books : "+totalPrice);
 

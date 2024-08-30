@@ -3,6 +3,7 @@ package selenium_bypavan;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -11,10 +12,12 @@ public class Assignment_05 extends BaseClass{
 
 	public static void main(String[] args) throws Exception{
 		WebDriver driver = getDriver();
+		JavascriptExecutor js = getJavascriptExecutor();
+		
 		driver.get("https://testautomationpractice.blogspot.com/");
 		Thread.sleep(2000);
 		WebElement label_colors = driver.findElement(By.xpath("//label[text()='Colors:']"));
-		getJS().executeScript("arguments[0].scrollIntoView(true)", label_colors);
+		js.executeScript("arguments[0].scrollIntoView(true)", label_colors);
 		Thread.sleep(2000);
 		WebElement txtarea_colors = driver.findElement(By.xpath("//select[@id='colors']"));
 		Select selectColors = new Select(txtarea_colors);

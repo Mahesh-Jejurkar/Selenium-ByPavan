@@ -1,6 +1,7 @@
 package selenium_bypavan;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -8,10 +9,12 @@ public class DynamicTable1 extends BaseClass {
 
 	public static void main(String[] args) throws Exception {
 		WebDriver driver = getDriver();
+		JavascriptExecutor js = getJavascriptExecutor();
+		
 		driver.get("https://testautomationpractice.blogspot.com/");
 		Thread.sleep(2000);
 
-		getJS().executeScript("window.scrollTo(0, document.body.scrollHeight);");
+		js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
 		int noOfpages = driver.findElements(By.xpath("//ul[@id='pagination']//li")).size();
 
 		for (int page = 1; page <= noOfpages; page++) {

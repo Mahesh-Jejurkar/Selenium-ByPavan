@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -13,6 +14,8 @@ public class Methods_get extends BaseClass {
 
 	public static void main(String[] args) throws Exception {
 		WebDriver driver = getDriver();
+		JavascriptExecutor js = getJavascriptExecutor();
+		
 		driver.get("https://testautomationpractice.blogspot.com/");
 		Thread.sleep(2000);
 		
@@ -34,7 +37,7 @@ public class Methods_get extends BaseClass {
 		Thread.sleep(1000);
 		
 		WebElement we_country = driver.findElement(By.xpath("//label[normalize-space()='Country:']"));
-		getJS().executeScript("arguments[0].scrollIntoView(true);", we_country);
+		js.executeScript("arguments[0].scrollIntoView(true);", we_country);
 		
 		WebElement chk_male = driver.findElement(By.xpath("//input[@id='male']"));
 		System.out.println(chk_male.isSelected());

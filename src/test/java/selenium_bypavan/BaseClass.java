@@ -36,7 +36,7 @@ public class BaseClass{
 		return myFluentWait; 
 	}
 	
-	public static JavascriptExecutor getJS() {
+	public static JavascriptExecutor getJavascriptExecutor() {
 		js = (JavascriptExecutor) driver;
 		return js;
 	}

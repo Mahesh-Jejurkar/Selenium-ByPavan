@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-public class Handle_SelectDropDown extends BaseClass{
+public class SelectDropDown extends BaseClass{
 
 	public static void main(String[] args) throws Exception{
 		WebDriver driver = getDriver();

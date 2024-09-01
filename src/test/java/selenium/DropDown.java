@@ -35,7 +35,7 @@ public class DropDown {
 			 obtainedList.add(e.getText());
 		}
 		System.out.println("Original List "+obtainedList);
-		List tempList = new ArrayList(obtainedList);
+		List<String> tempList = new ArrayList<String>(obtainedList);
 		
 		Collections.sort(tempList);
 		System.out.println("Sorted List "+ tempList);

@@ -1,6 +1,5 @@
 package selenium;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -25,7 +24,6 @@ public class Alert5 {
 		String expectedText = "Hello " + inputText + " How are you today";
 		String actualText = null;
 		String resultText = "Test Passed...";
-		Alert alert;
 		int i = 0;
 
 		driver.findElement(By.xpath(Xpath_AlertWithTexbox)).click();

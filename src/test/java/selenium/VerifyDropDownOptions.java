@@ -25,8 +25,8 @@ public class VerifyDropDownOptions {
 		Select daysOptions = new Select(days);
 		List<WebElement> options = daysOptions.getOptions();
 
-		List originalList = new ArrayList();
-		List tempList = new ArrayList();
+		List<String> originalList = new ArrayList<String>();
+		List<String> tempList = new ArrayList<String>();
 
 		for (WebElement e : options) {
 			originalList.add(e.getText());

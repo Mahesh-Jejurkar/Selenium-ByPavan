@@ -21,13 +21,8 @@ public class MouseHover2 {
 		driver.get("https://demo.automationtesting.in/Register.html");
 		Thread.sleep(2000);
 
-		WebElement switchTo = driver.findElement(By.xpath("//*[text()='SwitchTo']"));
-		WebElement frames = driver.findElement(By.xpath("//*[text()='Frames']"));
 		WebElement home = driver.findElement(By.xpath("//*[text()='Home']"));
-
 		act.contextClick(home).sendKeys(Keys.ARROW_RIGHT).sendKeys(Keys.ARROW_DOWN).click().build().perform();
-
-		// action.moveToElement(switchTo).moveToElement(frames).click().build().perform();
 
 		Thread.sleep(5000);
 		driver.close();

@@ -21,7 +21,7 @@ public class Assignment_08 extends BaseClass{
 		
 		Thread.sleep(500);
 		input_from.sendKeys(from_location);
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		List<WebElement> list_from = driver.findElements(By.xpath("//div[@id='onewaymain']//div[1]/div[1]/ul//p"));
 		for(WebElement from : list_from) {
 			if(from.getText().contains(from_location)) {

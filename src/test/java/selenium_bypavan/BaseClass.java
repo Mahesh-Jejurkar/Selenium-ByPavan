@@ -1,11 +1,7 @@
 package selenium_bypavan;
 
-import java.io.File;
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
 
-import org.apache.commons.cli.Options;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

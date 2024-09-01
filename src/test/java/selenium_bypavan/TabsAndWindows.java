@@ -3,13 +3,11 @@ package selenium_bypavan;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WindowType;
-import org.openqa.selenium.interactions.Actions;
 
 public class TabsAndWindows extends BaseClass{
 
 	public static void main(String[] args) throws Exception{
 		WebDriver driver = getDriver();
-		Actions act = getActions();
 		
 		driver.get("https://demo.opencart.com/");
 		Thread.sleep(2000);

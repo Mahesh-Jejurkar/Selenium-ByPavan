@@ -4,13 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 
 public class Javascript_Executor extends BaseClass {
 
 	public static void main(String[] args) throws Exception{
 		WebDriver driver = getDriver();
-		Actions act = getActions();
 		JavascriptExecutor js = getJavascriptExecutor();
 		
 		driver.get("https://testautomationpractice.blogspot.com/");

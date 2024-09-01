@@ -12,7 +12,7 @@ public class FileUpload extends BaseClass{
 		driver.get("https://demo.guru99.com/test/upload/");
 		Thread.sleep(2000);
 		WebElement input_fileupload = driver.findElement(By.xpath("//input[@id='uploadfile_0']"));
-		input_fileupload.sendKeys("D:\\docker-compose.yml");
+		input_fileupload.sendKeys(System.getProperty("user.dir")+"\\input-files\\Dummy.txt");
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//input[@id='terms']")).click();
 		Thread.sleep(2000);

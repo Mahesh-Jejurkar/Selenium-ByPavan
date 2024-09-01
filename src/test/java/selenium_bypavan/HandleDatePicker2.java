@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.Select;
 public class HandleDatePicker2 extends BaseClass{
 
 	public static void main(String[] args) throws Exception{
-		String year = "1990";
+		String year = "2024";
 		String month = "February";
 		String day = "24";
 		
@@ -64,7 +64,6 @@ public class HandleDatePicker2 extends BaseClass{
 		
 		closeDriver();
 	}
-	
 	
 	static Month convertMonthToObject(String month) {
 		HashMap<String, Month> monthMap = new HashMap<String, Month>();

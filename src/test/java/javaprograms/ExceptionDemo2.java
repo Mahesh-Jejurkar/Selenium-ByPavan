@@ -7,6 +7,7 @@ public class ExceptionDemo2 {
 			int d = 0;
 			int n = 20;
 			int fraction = n / d;
+			System.out.println(fraction);
 		} catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("In the catch block due to exception : " + e);
 		} finally {

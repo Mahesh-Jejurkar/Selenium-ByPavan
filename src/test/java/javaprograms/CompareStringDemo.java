@@ -2,6 +2,7 @@ package javaprograms;
 
 public class CompareStringDemo {
 
+	@SuppressWarnings("unused")
 	public static boolean compareTwoString(String str1, String str2) {
 		int str1Lenght = str1.length();
 		int str2Length = str2.length();

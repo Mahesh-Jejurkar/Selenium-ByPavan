@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class HandleDatePicker extends BaseClass {
+public class HandleDatePicker1 extends BaseClass {
 	static String dd = "1";
 	static String mm = "September";
 	static String yyyy = "2024";

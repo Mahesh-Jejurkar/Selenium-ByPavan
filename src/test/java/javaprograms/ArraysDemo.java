@@ -47,7 +47,7 @@ public class ArraysDemo {
 		}
 
 		System.out.println("Sum of array values : " + sum);
-		System.out.println("Even no. array : "+Arrays.toString(evenNo));
-		System.out.println("Even no. array : "+Arrays.toString(oddNo));
+		System.out.println("No of even values : "+countENo +"\n Even no. array : "+Arrays.toString(evenNo));
+		System.out.println("No of odd values : "+countONo +"\n Odd no. array : "+Arrays.toString(oddNo));
 	}
 }

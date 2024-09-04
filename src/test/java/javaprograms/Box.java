@@ -21,7 +21,7 @@ public class Box {
 		return (width*height*depth);
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] a) {
 		Box b = new Box(1,2,3);
 		System.out.println(b.volume());		
 	}			

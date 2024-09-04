@@ -16,7 +16,7 @@ public class StringVsStringBufferVsStringBuilder {
 		System.out.println(s1);
 		System.out.println(s2);
 		
-		//StringBuilde - mutable - can change
+		//StringBuilder - mutable - can change
 		StringBuilder s11 = new StringBuilder("Welcome");
 		StringBuilder s12 = new StringBuilder("to java programing.");
 		s11.append(s12);

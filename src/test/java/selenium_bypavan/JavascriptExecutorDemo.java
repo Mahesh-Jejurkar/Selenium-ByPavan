@@ -5,7 +5,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class Javascript_Executor extends BaseClass {
+public class JavascriptExecutorDemo extends BaseClass {
 
 	public static void main(String[] args) throws Exception{
 		WebDriver driver = getDriver();

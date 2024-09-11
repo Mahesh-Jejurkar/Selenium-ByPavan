@@ -18,7 +18,7 @@ public class CaptureScreenshotDemo2 {
 		TakesScreenshot screenshot = (TakesScreenshot)driver;
 		
 		driver.manage().window().maximize();
-		driver.get("https://testautomationpractice.blogspot.com/");
+		driver.get("https://www.opencart.com/");
 		Thread.sleep(2000);
 		
 		//Full page screenshot
@@ -28,12 +28,20 @@ public class CaptureScreenshotDemo2 {
 		Thread.sleep(2000);
 		
 		//Screenshot of element
-		WebElement div_wikipedia = driver.findElement(By.xpath("//div[@id='Wikipedia1']"));
+		WebElement div_wikipedia = driver.findElement(By.xpath("//div[@class='navbar-header']"));
 		File src2 = div_wikipedia.getScreenshotAs(OutputType.FILE);
-		File tgt2 = new File(".\\screenshot\\wikipedia.jpg");
+		File tgt2 = new File(".\\screenshot\\opencartlogo.jpg");
 		FileUtils.copyFile(src2, tgt2);
+		Thread.sleep(2000);
+		
+		//Screenshot of element 
+		WebElement div_rightsidebar	= driver.findElement(By.xpath("//div[contains(@class,'device')]"));
+		File src3 = div_rightsidebar.getScreenshotAs(OutputType.FILE);
+		File tgt3 = new File(".\\screenshot\\opencartdevice.jpg");
+		FileUtils.copyFile(src3, tgt3);
 		
 		
+		Thread.sleep(5000);
 		driver.close();
 	}
 

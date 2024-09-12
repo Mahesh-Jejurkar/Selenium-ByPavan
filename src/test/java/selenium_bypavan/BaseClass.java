@@ -1,6 +1,8 @@
 package selenium_bypavan;
 
 import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -65,5 +67,12 @@ public class BaseClass{
 	public static void closeDriver() throws Exception {
 		Thread.sleep(9000);
 		driver.quit();
+	}
+	
+	public static String getDateTime() {
+		LocalDateTime currentDate = LocalDateTime.now();
+		DateTimeFormatter expectedFormat = DateTimeFormatter.ofPattern("dd_MM_yyyy_HH_mm_ss");
+		String dateTime = currentDate.format(expectedFormat);
+		return dateTime;
 	}
 }

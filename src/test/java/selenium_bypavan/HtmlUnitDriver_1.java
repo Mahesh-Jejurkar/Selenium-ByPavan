@@ -3,7 +3,7 @@ package selenium_bypavan;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
-public class HtmlUnitdDriver {
+public class HtmlUnitDriver_1 {
 	
 	public static void main(String[] args) throws Exception {
 		WebDriver driver = new HtmlUnitDriver();

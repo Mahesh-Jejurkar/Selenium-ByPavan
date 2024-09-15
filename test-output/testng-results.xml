@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-15T22:06:00 IST" name="Default suite" finished-at="2024-09-15T22:06:00 IST" duration-ms="63">
+  <suite started-at="2024-09-15T23:11:38 IST" name="Default suite" finished-at="2024-09-15T23:12:06 IST" duration-ms="27518">
     <groups>
     </groups>
-    <test started-at="2024-09-15T22:06:00 IST" name="Default test" finished-at="2024-09-15T22:06:00 IST" duration-ms="63">
-      <class name="testNG.FirstTestCase">
-        <test-method signature="openapp()[pri:-1, instance:testNG.FirstTestCase@45c7e403]" started-at="2024-09-15T22:06:00 IST" name="openapp" finished-at="2024-09-15T22:06:00 IST" duration-ms="9" status="PASS">
+    <test started-at="2024-09-15T23:11:38 IST" name="Default test" finished-at="2024-09-15T23:12:06 IST" duration-ms="27518">
+      <class name="testNG_byPavan.OrangeHRMTest">
+        <test-method signature="openApp()[pri:1, instance:testNG_byPavan.OrangeHRMTest@7817fd62]" started-at="2024-09-15T23:11:38 IST" name="openApp" finished-at="2024-09-15T23:11:58 IST" duration-ms="19670" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openapp -->
-        <test-method signature="login()[pri:0, instance:testNG.FirstTestCase@45c7e403]" started-at="2024-09-15T22:06:00 IST" name="login" finished-at="2024-09-15T22:06:00 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- openApp -->
+        <test-method signature="testLogo()[pri:2, instance:testNG_byPavan.OrangeHRMTest@7817fd62]" started-at="2024-09-15T23:11:58 IST" name="testLogo" finished-at="2024-09-15T23:12:00 IST" duration-ms="2065" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="logout()[pri:1, instance:testNG.FirstTestCase@45c7e403]" started-at="2024-09-15T22:06:00 IST" name="logout" finished-at="2024-09-15T22:06:00 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- testLogo -->
+        <test-method signature="testLogin()[pri:3, instance:testNG_byPavan.OrangeHRMTest@7817fd62]" started-at="2024-09-15T23:12:00 IST" name="testLogin" finished-at="2024-09-15T23:12:02 IST" duration-ms="2115" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logout -->
-      </class> <!-- testNG.FirstTestCase -->
+        </test-method> <!-- testLogin -->
+        <test-method signature="testLogout()[pri:4, instance:testNG_byPavan.OrangeHRMTest@7817fd62]" started-at="2024-09-15T23:12:02 IST" name="testLogout" finished-at="2024-09-15T23:12:06 IST" duration-ms="3436" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogout -->
+        <test-method signature="closeApp()[pri:5, instance:testNG_byPavan.OrangeHRMTest@7817fd62]" started-at="2024-09-15T23:12:06 IST" name="closeApp" finished-at="2024-09-15T23:12:06 IST" duration-ms="144" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- testNG_byPavan.OrangeHRMTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

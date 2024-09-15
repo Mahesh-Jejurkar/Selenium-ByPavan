@@ -26,7 +26,6 @@ public class JavascriptExecutor_2 {
 		JavascriptUtilities.generateAlert(driver, "Opencart loaded...");
 		Thread.sleep(1000);
 		JavascriptUtilities.acceptAlert(driver);
-		JavascriptUtilities.takeScreenshot(driver, "Page_Home");
 		
 		// Getting title of page
 		String page_title = JavascriptUtilities.getTitle(driver);
@@ -53,12 +52,11 @@ public class JavascriptExecutor_2 {
 
 		// Click element
 		WebElement link_features = driver
-				.findElement(By.xpath("//div[@id='navbar-collapse-header']//a[text()='Features']"));
+				.findElement(By.xpath("//div[@id='navbar-collapse-header']//a[text()='Demo']"));
 		JavascriptUtilities.clickElement(driver, link_features);
 		Thread.sleep(1000);
 		String page_tile2 = JavascriptUtilities.getTitle(driver);
 		System.out.println(page_tile2);
-		JavascriptUtilities.takeScreenshot(driver, "Page_Feature");
 		Thread.sleep(2000);
 		
 		// Scroll the page to height of pixel
@@ -78,7 +76,7 @@ public class JavascriptExecutor_2 {
 		Thread.sleep(4000);
 		JavascriptUtilities.zoomPage(driver, "90%");
 
-		Thread.sleep(7000);
+		Thread.sleep(9000);
 		driver.close();
 	}
 

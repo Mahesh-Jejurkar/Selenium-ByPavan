@@ -37,8 +37,8 @@ public class WriteDataToExcel {
 
 		XSSFSheet sheet = workbook.createSheet("AllLinks");
 		XSSFRow row_0 = sheet.createRow(0);
+		
 		XSSFCell header_linkText = row_0.createCell(0);
-
 		header_linkText.setCellValue("Link Text");
 		header_linkText.setCellStyle(cell_style);
 

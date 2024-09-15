@@ -6,6 +6,7 @@ import java.time.format.DateTimeFormatter;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
@@ -74,5 +75,12 @@ public class BaseClass{
 		DateTimeFormatter expectedFormat = DateTimeFormatter.ofPattern("dd_MM_yyyy_HH_mm_ss");
 		String dateTime = currentDate.format(expectedFormat);
 		return dateTime;
+	}
+	
+	public static void changeColor(WebDriver driver , WebElement element) throws Exception {
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("arguments[0].style.backgroundColor='rgba(0, 255, 0, 1)'", element);
+		Thread.sleep(1000);
+		js.executeScript("arguments[0].style.backgroundColor='rgba(0, 0, 0, 0)'", element);
 	}
 }

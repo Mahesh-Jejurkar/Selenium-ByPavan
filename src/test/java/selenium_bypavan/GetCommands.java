@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class WebDriverGetCommands {
+public class GetCommands {
 
 	public static void main(String[] args) throws Exception {
 		WebDriverManager.chromedriver().setup();

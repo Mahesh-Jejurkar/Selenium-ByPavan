@@ -20,10 +20,10 @@ public class SliderMovment extends BaseClass {
 		Thread.sleep(1000);
 
 		WebElement we_sliderhead = driver.findElement(By.xpath("//div[@id='slider']//span"));
-		System.out.println(we_sliderhead.getLocation()); // (889, 1081)=>(x, y)
+		System.out.println(we_sliderhead.getLocation()); 				// (889, 1081)=>(x, y)
 
 		for (int x=0; x <= 20; x++) {
-			act.dragAndDropBy(we_sliderhead,x,0).build().perform(); // Here we don't want to move Y axis hence we kept
+			act.dragAndDropBy(we_sliderhead,x,0).build().perform(); 	// Here we don't want to move Y axis hence we kept
 																		// at 0 mean it's original value i.e. 1081
 		}
 		System.out.println(we_sliderhead.getLocation());

@@ -33,6 +33,7 @@ public class BaseClass{
 //		options.addExtensions(crx_selectorhub);
 //		options.addExtensions(crx_addblocker);
 //		options.addExtensions(crxfiles); 
+		//Disable automated notification bar
 		options.setExperimentalOption("excludeSwitches", new String[] {"enable-automation"});
 		
 		driver = new ChromeDriver(options);

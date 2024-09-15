@@ -13,10 +13,11 @@ public class MouseActions_1 extends BaseClass {
 		Actions action = getActions();
 		
 		//MoveToElement and Click
-		driver.get("https://demo.opencart.com/");
-		Thread.sleep(4000);
-		WebElement menu_desktop = driver.findElement(By.xpath("//div[@id='narbar-menu']/ul/li[1]"));
-		WebElement menu_mac = driver.findElement(By.xpath("//div[@id='narbar-menu']/ul/li[1]//li[2]/a"));
+		driver.get("https://tutorialsninja.com/demo/");
+		Thread.sleep(2000);
+		WebElement menu_desktop = driver.findElement(By.xpath("//nav[@id='menu']/div[2]/ul/li[1]/a"));
+		WebElement menu_mac = driver.findElement(By.xpath("//nav[@id='menu']/div[2]/ul/li[1]//li[2]/a"));
+		
 		action.moveToElement(menu_desktop).moveToElement(menu_mac).click().build().perform();
 		Thread.sleep(5000);
 

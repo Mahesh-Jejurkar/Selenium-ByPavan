@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.Select;
 public class DatePicker_2 extends BaseClass{
 
 	public static void main(String[] args) throws Exception{
-		String year = "2024";
+		String year = "2022";
 		String month = "February";
 		String day = "24";
 		

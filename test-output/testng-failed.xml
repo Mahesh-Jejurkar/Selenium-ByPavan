@@ -3,11 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testNG_byPavan.HardVsSoftAssertions">
+      <class name="testNG.Guru99_TestLogin">
         <methods>
-          <include name="test_softassertion"/>
+          <include name="isUserLoggedIn"/>
+          <include name="enterCredentials"/>
+          <include name="launchApp"/>
+          <include name="istUserLoggedOut"/>
+          <include name="isHomePageLoaded"/>
+          <include name="closeBrowser"/>
         </methods>
-      </class> <!-- testNG_byPavan.HardVsSoftAssertions -->
+      </class> <!-- testNG.Guru99_TestLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

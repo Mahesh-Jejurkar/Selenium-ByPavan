@@ -1,29 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-16T08:51:25 IST" name="Default suite" finished-at="2024-09-16T08:51:25 IST" duration-ms="92">
+  <suite started-at="2024-09-16T11:52:29 IST" name="Suite" finished-at="2024-09-16T11:52:29 IST" duration-ms="143">
     <groups>
     </groups>
-    <test started-at="2024-09-16T08:51:25 IST" name="Default test" finished-at="2024-09-16T08:51:25 IST" duration-ms="92">
-      <class name="testNG_byPavan.AnnotationDemo_2">
-        <test-method is-config="true" signature="login()[pri:0, instance:testNG_byPavan.AnnotationDemo_2@5aebe890]" started-at="2024-09-16T08:51:25 IST" name="login" finished-at="2024-09-16T08:51:25 IST" duration-ms="12" status="PASS">
+    <test started-at="2024-09-16T11:52:29 IST" name="Test_1" finished-at="2024-09-16T11:52:29 IST" duration-ms="67">
+      <class name="testNG_byPavan.C2">
+        <test-method is-config="true" signature="bm()[pri:0, instance:testNG_byPavan.C2@f79e]" started-at="2024-09-16T11:52:29 IST" name="bm" finished-at="2024-09-16T11:52:29 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="search()[pri:1, instance:testNG_byPavan.AnnotationDemo_2@5aebe890]" started-at="2024-09-16T08:51:25 IST" name="search" finished-at="2024-09-16T08:51:25 IST" duration-ms="10" status="PASS">
+        </test-method> <!-- bm -->
+        <test-method signature="xyz()[pri:0, instance:testNG_byPavan.C2@f79e]" started-at="2024-09-16T11:52:29 IST" name="xyz" finished-at="2024-09-16T11:52:29 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- search -->
-        <test-method signature="advancedsearch()[pri:2, instance:testNG_byPavan.AnnotationDemo_2@5aebe890]" started-at="2024-09-16T08:51:25 IST" name="advancedsearch" finished-at="2024-09-16T08:51:25 IST" duration-ms="7" status="PASS">
+        </test-method> <!-- xyz -->
+        <test-method is-config="true" signature="am()[pri:0, instance:testNG_byPavan.C2@f79e]" started-at="2024-09-16T11:52:29 IST" name="am" finished-at="2024-09-16T11:52:29 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- advancedsearch -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:testNG_byPavan.AnnotationDemo_2@5aebe890]" started-at="2024-09-16T08:51:25 IST" name="logout" finished-at="2024-09-16T08:51:25 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- am -->
+      </class> <!-- testNG_byPavan.C2 -->
+      <class name="testNG_byPavan.C3">
+        <test-method signature="pqr()[pri:0, instance:testNG_byPavan.C3@7494f96a]" started-at="2024-09-16T11:52:29 IST" name="pqr" finished-at="2024-09-16T11:52:29 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logout -->
-      </class> <!-- testNG_byPavan.AnnotationDemo_2 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- pqr -->
+      </class> <!-- testNG_byPavan.C3 -->
+      <class name="testNG_byPavan.C1">
+        <test-method is-config="true" signature="bt()[pri:0, instance:testNG_byPavan.C1@399c4be1]" started-at="2024-09-16T11:52:29 IST" name="bt" finished-at="2024-09-16T11:52:29 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bt -->
+        <test-method signature="abc()[pri:0, instance:testNG_byPavan.C1@399c4be1]" started-at="2024-09-16T11:52:29 IST" name="abc" finished-at="2024-09-16T11:52:29 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- abc -->
+        <test-method is-config="true" signature="at()[pri:0, instance:testNG_byPavan.C1@399c4be1]" started-at="2024-09-16T11:52:29 IST" name="at" finished-at="2024-09-16T11:52:29 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- at -->
+      </class> <!-- testNG_byPavan.C1 -->
+    </test> <!-- Test_1 -->
+    <test started-at="2024-09-16T11:52:29 IST" name="Test_2" finished-at="2024-09-16T11:52:29 IST" duration-ms="19">
+      <class name="testNG_byPavan.C2">
+        <test-method is-config="true" signature="bm()[pri:0, instance:testNG_byPavan.C2@65b3f4a4]" started-at="2024-09-16T11:52:29 IST" name="bm" finished-at="2024-09-16T11:52:29 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bm -->
+        <test-method signature="xyz()[pri:0, instance:testNG_byPavan.C2@65b3f4a4]" started-at="2024-09-16T11:52:29 IST" name="xyz" finished-at="2024-09-16T11:52:29 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- xyz -->
+        <test-method is-config="true" signature="am()[pri:0, instance:testNG_byPavan.C2@65b3f4a4]" started-at="2024-09-16T11:52:29 IST" name="am" finished-at="2024-09-16T11:52:29 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- am -->
+      </class> <!-- testNG_byPavan.C2 -->
+      <class name="testNG_byPavan.C3">
+        <test-method is-config="true" signature="bs()[pri:0, instance:testNG_byPavan.C3@f2ff811]" started-at="2024-09-16T11:52:29 IST" name="bs" finished-at="2024-09-16T11:52:29 IST" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bs -->
+        <test-method signature="pqr()[pri:0, instance:testNG_byPavan.C3@f2ff811]" started-at="2024-09-16T11:52:29 IST" name="pqr" finished-at="2024-09-16T11:52:29 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pqr -->
+        <test-method is-config="true" signature="as()[pri:0, instance:testNG_byPavan.C3@f2ff811]" started-at="2024-09-16T11:52:29 IST" name="as" finished-at="2024-09-16T11:52:29 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- as -->
+      </class> <!-- testNG_byPavan.C3 -->
+      <class name="testNG_byPavan.C1">
+        <test-method is-config="true" signature="bt()[pri:0, instance:testNG_byPavan.C1@1018bde2]" started-at="2024-09-16T11:52:29 IST" name="bt" finished-at="2024-09-16T11:52:29 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bt -->
+        <test-method signature="abc()[pri:0, instance:testNG_byPavan.C1@1018bde2]" started-at="2024-09-16T11:52:29 IST" name="abc" finished-at="2024-09-16T11:52:29 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- abc -->
+        <test-method is-config="true" signature="at()[pri:0, instance:testNG_byPavan.C1@1018bde2]" started-at="2024-09-16T11:52:29 IST" name="at" finished-at="2024-09-16T11:52:29 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- at -->
+      </class> <!-- testNG_byPavan.C1 -->
+    </test> <!-- Test_2 -->
+  </suite> <!-- Suite -->
 </testng-results>

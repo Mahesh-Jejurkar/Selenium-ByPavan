@@ -1,7 +1,5 @@
 package testNG_byPavan;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,7 +9,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners(testNG_byPavan.MyListenerClass.class)
+//@Listeners(testNG_byPavan.MyListenerClass.class)
 public class OrangeHRM_WithListeners {
 	WebDriver driver;
 	String url = "https://tutorialsninja.com/demo/";
@@ -19,7 +17,6 @@ public class OrangeHRM_WithListeners {
 	@BeforeClass
 	void setup(){
 		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
 	}
 	
@@ -38,19 +35,18 @@ public class OrangeHRM_WithListeners {
 	
 	@Test(priority = 3)
 	void testURL() {
-		Assert.assertEquals(driver.getCurrentUrl(), url);
+		//Assert.assertEquals(driver.getCurrentUrl(), url);
+		Assert.fail();
 	}
 	
-	@Test(priority = 4, dependsOnMethods = {"testLaunchApp"})
+	@Test(priority = 4, dependsOnMethods = {"testURL"})
 	void testTitle() {
 		Assert.assertEquals(driver.getTitle(), "Your Store");
 	}
 	
 	@AfterClass
 	void tearDown() throws Exception {
-		Thread.sleep(5000);
 		driver.close();
 	}
 	
-
 }

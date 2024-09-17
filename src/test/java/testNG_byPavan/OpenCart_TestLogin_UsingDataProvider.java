@@ -8,7 +8,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-public class OpenCart_TestLogin_DataProvider {
+@Listeners(testNG_byPavan.MyListenerClass.class)
+public class OpenCart_TestLogin_UsingDataProvider {
 	
 	WebDriver driver;
 	

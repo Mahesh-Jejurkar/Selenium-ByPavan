@@ -3,11 +3,11 @@ package opencart_PageFactoryModel;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage {
+public class LoginPage_1 {
 	WebDriver driver;
 
 	// Constructor
-	LoginPage(WebDriver driver) {
+	LoginPage_1(WebDriver driver) {
 		this.driver = driver;
 	}
 

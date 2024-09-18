@@ -7,7 +7,7 @@
         <methods>
           <include name="tearDown"/>
           <include name="setup"/>
-          <include name="testLogin"/>
+          <include name="testLogin" invocation-numbers="1"/>
         </methods>
       </class> <!-- opencart_PageFactoryModel.LoginTest -->
     </classes>

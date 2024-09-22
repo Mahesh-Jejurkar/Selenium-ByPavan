@@ -4,49 +4,45 @@ import java.io.File;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 
-public class CaptureScreenshot_1 extends BaseClass{
 
-	public static void main(String[] args) throws Exception{
-		WebDriver driver = getDriver();
-		JavascriptExecutor js = getJavascriptExecutor();
-		TakesScreenshot takesscreenshot = (TakesScreenshot) driver;
+public class CaptureScreenshot_1 {
+
+	public static void main(String[] args) throws Exception {
+		WebDriver driver = new ChromeDriver();
+		TakesScreenshot screenshot = (TakesScreenshot)driver;
 		
-		driver.get("https://tutorialsninja.com/demo/");
+		driver.manage().window().maximize();
+		driver.get("https://www.opencart.com/");
 		Thread.sleep(2000);
-		System.out.println(driver.getTitle());
 		
 		//Full page screenshot
-		File screenshot_fullpage = takesscreenshot.getScreenshotAs(OutputType.FILE);
-		File filepath1 = new File(System.getProperty("user.dir")+"\\screenshot\\screen1.jpg");
-		FileUtils.copyFile(screenshot_fullpage, filepath1);
-		
-		
-		//Capture screenshot of webelement
+		File src = screenshot.getScreenshotAs(OutputType.FILE);
+		File tgt = new File(".\\screenshot\\homescreen.jpg");
+		FileUtils.copyFile(src, tgt);
 		Thread.sleep(2000);
-		WebElement buttton_cart	= driver.findElement(By.xpath("//div[@id='cart']"));
-		File screenshot_cartbutton = buttton_cart.getScreenshotAs(OutputType.FILE);
-		File filepath3 = new File (System.getProperty("user.dir")+"\\screenshot\\cartbutton.jpg");
-		FileUtils.copyFile(screenshot_cartbutton, filepath3);
 		
-		
-		
-		//Capture screenshot of specific section
+		//Screenshot of element
+		WebElement div_wikipedia = driver.findElement(By.xpath("//div[@class='navbar-header']"));
+		File src2 = div_wikipedia.getScreenshotAs(OutputType.FILE);
+		File tgt2 = new File(".\\screenshot\\opencartlogo.jpg");
+		FileUtils.copyFile(src2, tgt2);
 		Thread.sleep(2000);
-		WebElement div_featureprodct =	driver.findElement(By.xpath("//div[@id='content']/div[2]"));
-		js.executeScript("arguments[0].scrollIntoView()", div_featureprodct);
-		Thread.sleep(1000);
-		File screenshot_featuredproduct	= div_featureprodct.getScreenshotAs(OutputType.FILE);
-		File filepath2 = new File(System.getProperty("user.dir")+"\\screenshot\\featuredproduct1.jpg");
-		FileUtils.copyFile(screenshot_featuredproduct, filepath2);
+		
+		//Screenshot of element 
+		WebElement div_rightsidebar	= driver.findElement(By.xpath("//div[contains(@class,'device')]"));
+		File src3 = div_rightsidebar.getScreenshotAs(OutputType.FILE);
+		File tgt3 = new File(".\\screenshot\\opencartdevice.jpg");
+		FileUtils.copyFile(src3, tgt3);
 		
 		
-		
-		closeDriver();
+		Thread.sleep(5000);
+		driver.close();
 	}
+
 }

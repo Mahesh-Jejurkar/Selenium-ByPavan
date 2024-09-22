@@ -26,6 +26,9 @@ public class LoginPage_2 {
 	@FindBy(xpath = "//input[@value='Login']")
 	WebElement element_button_login;
 	
+	@FindBy(xpath = "//a[@class='list-group-item'][text()='Logout']")
+	WebElement element_button_logout;
+	
 	@FindBy(tagName = "a")
 	List<WebElement> allLinks;
 	
@@ -40,5 +43,9 @@ public class LoginPage_2 {
 	
 	public void clickLogin() {
 		element_button_login.click();
+	}
+	
+	public void clickLogout() {
+		element_button_logout.click();
 	}
 }

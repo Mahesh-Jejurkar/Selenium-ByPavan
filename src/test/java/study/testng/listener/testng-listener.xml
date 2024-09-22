@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Study-Selenium2">
+	<listeners>
+		<listener class-name="study.testng.listener.TestNGListener"></listener>
+	</listeners>
+	<test name="TestNGListener">
+		<classes>
+			<class name="study.testng.listener.OrangeHRMTest"></class>
+		</classes>		
+	</test>
+	
+</suite>

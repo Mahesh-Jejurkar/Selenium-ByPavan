@@ -1,6 +1,5 @@
 package javaprograms;
 
-import io.netty.util.internal.SystemPropertyUtil;
 
 public class VariablesDemo {
 

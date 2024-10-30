@@ -59,7 +59,6 @@ public class ExtentReportListener implements ITestListener {
 	public void onTestSkipped(ITestResult result) {
 		test = reports.createTest(result.getName());
 		test.log(Status.SKIP, "Test case is SKKIPED : " + result.getName());
-
 	}
 
 }

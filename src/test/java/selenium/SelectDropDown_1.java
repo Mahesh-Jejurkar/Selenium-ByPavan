@@ -13,8 +13,10 @@ public class SelectDropDown_1 extends BaseClass{
 		WebDriver driver = getDriver();
 		driver.get("https://testautomationpractice.blogspot.com/");
 		Thread.sleep(2000);
+		
 		WebElement  dropdown_country = driver.findElement(By.xpath("//select[@id='country']"));
 		Select select_country = new Select(dropdown_country);
+		
 		List<WebElement> listCountry = select_country.getOptions();
 		for( WebElement country : listCountry) {
 			System.out.println(country.getText());

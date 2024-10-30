@@ -10,5 +10,8 @@ public class HardAssertions {
 		Assert.assertEquals("Mahesh", "Mahesh");
 		Assert.assertEquals(true, false);
 		Assert.assertEquals(10, 10);
+		Assert.fail();
+		Assert.assertTrue(true);
+		Assert.assertFalse(false);
 	}
 }

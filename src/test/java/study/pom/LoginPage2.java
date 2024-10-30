@@ -19,11 +19,6 @@ public class LoginPage2 {
 	}
 
 	//Locators
-	/*
-	 * @FindBy(how=How.XPATH, using="//input[@name='username']") WebElement
-	 * loc_input_username;
-	 */
-	
 	@FindBy(xpath = "//input[@name='username']")
 	WebElement loc_input_username;
 	

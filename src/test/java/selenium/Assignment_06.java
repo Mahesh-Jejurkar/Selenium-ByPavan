@@ -33,7 +33,7 @@ public class Assignment_06 extends BaseClass{
 		List<WebElement> list_price = driver.findElements(By.xpath("//tbody//tr//td[6]"));
 	    int list_priceSize = list_price.size();
 	    List<String> list_priceValue = new ArrayList<String>();
-	    for(WebElement price	:list_price) {
+	    for(WebElement price:list_price) {
 	    	list_priceValue.add(price.getText());
 	    }
 		

@@ -6,13 +6,13 @@
     <parameter name="browser" value="opera"/>
     <parameter name="email" value="abc.xyz@jollyfree.com"/>
     <classes>
-      <class name="testNG_byPavan.OpenCart_TestLogin_XMLData">
+      <class name="testNG.OpenCart_TestLogin_UsingXMLFile">
         <methods>
-          <include name="tearDomn"/>
+          <include name="tearDown"/>
           <include name="setup"/>
           <include name="testLogin" invocation-numbers="0"/>
         </methods>
-      </class> <!-- testNG_byPavan.OpenCart_TestLogin_XMLData -->
+      </class> <!-- testNG.OpenCart_TestLogin_UsingXMLFile -->
     </classes>
   </test> <!-- TestLogin_DataSet_3(failed) -->
 </suite> <!-- Failed suite [OpenCart] -->

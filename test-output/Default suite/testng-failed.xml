@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="study.testng.listener.OrangeHRMTest">
+      <class name="testNG.OpenCart_TestLogin_UsingXMLFile">
         <methods>
-          <include name="testLogo"/>
-          <include name="closeApp"/>
-          <include name="testURL"/>
-          <include name="openApp"/>
+          <include name="tearDown"/>
+          <include name="testLogin"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- study.testng.listener.OrangeHRMTest -->
+      </class> <!-- testNG.OpenCart_TestLogin_UsingXMLFile -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

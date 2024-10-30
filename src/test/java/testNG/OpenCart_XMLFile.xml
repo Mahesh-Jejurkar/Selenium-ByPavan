@@ -7,7 +7,7 @@
 		<parameter name="email" value="jejurkar.mahesh@gmail.com" />
 		<parameter name="password" value="Mahesh@1990" />
 		<classes>
-			<class name="testNG_byPavan.OpenCart_TestLogin_XMLData"/>
+			<class name="testNG.OpenCart_TestLogin_UsingXMLFile"/>
 		</classes>
 	</test>
 
@@ -16,7 +16,7 @@
 		<parameter name="email" value="abc.xyz@jollyfree.com" />
 		<parameter name="password" value="abc@xyz" />
 		<classes>
-			<class name="testNG_byPavan.OpenCart_TestLogin_XMLData"/>
+			<class name="testNG.OpenCart_TestLogin_UsingXMLFile"/>
 		</classes>
 	</test>
 
@@ -25,7 +25,7 @@
 		<parameter name="email" value="abc.xyz@jollyfree.com" />
 		<parameter name="password" value="abc@xyz" />
 		<classes>
-			<class name="testNG_byPavan.OpenCart_TestLogin_XMLData"/>
+			<class name="testNG.OpenCart_TestLogin_UsingXMLFile"/>
 		</classes>
 	</test>
 </suite>

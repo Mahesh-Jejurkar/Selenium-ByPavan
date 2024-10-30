@@ -3,12 +3,14 @@ package javaprograms;
 public class CountWordsInString {
 
 	public static void main(String[] args) {
-		String s = "I am test engineer.";
+		String s = "I am test @engi#neer";
 		int count = 0;
 		
 		for(int i=0; i<s.length(); i++) {
-			s.charAt(i);
-			count ++;
+			char ch = s.charAt(i);
+			if(Character.isLetter(ch)) {
+				count ++;
+			}
 		}
 		System.out.println(count);
 		

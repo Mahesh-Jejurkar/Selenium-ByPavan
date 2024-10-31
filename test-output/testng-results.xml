@@ -1,61 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-30T11:21:03 IST" name="Suite" finished-at="2024-10-30T11:21:03 IST" duration-ms="84">
+  <suite started-at="2024-10-31T09:17:49 IST" name="Study-Selenium2" finished-at="2024-10-31T09:17:49 IST" duration-ms="66">
     <groups>
+      <group name="regression">
+        <method signature="SignupTest.signupByEmail()[pri:1, instance:study.testng.SignupTest@61f05988]" name="signupByEmail" class="study.testng.SignupTest"/>
+        <method signature="SignupTest.signupByFacebook()[pri:2, instance:study.testng.SignupTest@61f05988]" name="signupByFacebook" class="study.testng.SignupTest"/>
+        <method signature="SignupTest.signupByTwitter()[pri:3, instance:study.testng.SignupTest@61f05988]" name="signupByTwitter" class="study.testng.SignupTest"/>
+      </group> <!-- regression -->
     </groups>
-    <test started-at="2024-10-30T11:21:03 IST" name="Test" finished-at="2024-10-30T11:21:03 IST" duration-ms="84">
-      <class name="testNG.AllAnnotations">
-        <test-method is-config="true" signature="bs()[pri:0, instance:testNG.AllAnnotations@3a393455]" started-at="2024-10-30T11:21:03 IST" name="bs" finished-at="2024-10-30T11:21:03 IST" duration-ms="17" status="PASS">
+    <test started-at="2024-10-31T09:17:49 IST" name="GroupingTest1" finished-at="2024-10-31T09:17:49 IST" duration-ms="66">
+      <class name="study.testng.SignupTest">
+        <test-method signature="signupByEmail()[pri:1, instance:study.testng.SignupTest@61f05988]" started-at="2024-10-31T09:17:49 IST" name="signupByEmail" finished-at="2024-10-31T09:17:49 IST" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- bs -->
-        <test-method is-config="true" signature="bt()[pri:0, instance:testNG.AllAnnotations@3a393455]" started-at="2024-10-30T11:21:03 IST" name="bt" finished-at="2024-10-30T11:21:03 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- signupByEmail -->
+        <test-method signature="signupByFacebook()[pri:2, instance:study.testng.SignupTest@61f05988]" started-at="2024-10-31T09:17:49 IST" name="signupByFacebook" finished-at="2024-10-31T09:17:49 IST" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- bt -->
-        <test-method is-config="true" signature="bc()[pri:0, instance:testNG.AllAnnotations@3a393455]" started-at="2024-10-30T11:21:03 IST" name="bc" finished-at="2024-10-30T11:21:03 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- signupByFacebook -->
+        <test-method signature="signupByTwitter()[pri:3, instance:study.testng.SignupTest@61f05988]" started-at="2024-10-31T09:17:49 IST" name="signupByTwitter" finished-at="2024-10-31T09:17:49 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- bc -->
-        <test-method is-config="true" signature="bm()[pri:0, instance:testNG.AllAnnotations@3a393455]" started-at="2024-10-30T11:21:03 IST" name="bm" finished-at="2024-10-30T11:21:03 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bm -->
-        <test-method signature="test1()[pri:0, instance:testNG.AllAnnotations@3a393455]" started-at="2024-10-30T11:21:03 IST" name="test1" finished-at="2024-10-30T11:21:03 IST" duration-ms="10" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method is-config="true" signature="am()[pri:0, instance:testNG.AllAnnotations@3a393455]" started-at="2024-10-30T11:21:03 IST" name="am" finished-at="2024-10-30T11:21:03 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- am -->
-        <test-method is-config="true" signature="bm()[pri:0, instance:testNG.AllAnnotations@3a393455]" started-at="2024-10-30T11:21:03 IST" name="bm" finished-at="2024-10-30T11:21:03 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bm -->
-        <test-method signature="test2()[pri:0, instance:testNG.AllAnnotations@3a393455]" started-at="2024-10-30T11:21:03 IST" name="test2" finished-at="2024-10-30T11:21:03 IST" duration-ms="8" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test2 -->
-        <test-method is-config="true" signature="am()[pri:0, instance:testNG.AllAnnotations@3a393455]" started-at="2024-10-30T11:21:03 IST" name="am" finished-at="2024-10-30T11:21:03 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- am -->
-        <test-method is-config="true" signature="ac()[pri:0, instance:testNG.AllAnnotations@3a393455]" started-at="2024-10-30T11:21:03 IST" name="ac" finished-at="2024-10-30T11:21:03 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ac -->
-        <test-method is-config="true" signature="at()[pri:0, instance:testNG.AllAnnotations@3a393455]" started-at="2024-10-30T11:21:03 IST" name="at" finished-at="2024-10-30T11:21:03 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- at -->
-        <test-method is-config="true" signature="as()[pri:0, instance:testNG.AllAnnotations@3a393455]" started-at="2024-10-30T11:21:03 IST" name="as" finished-at="2024-10-30T11:21:03 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- as -->
-      </class> <!-- testNG.AllAnnotations -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- signupByTwitter -->
+      </class> <!-- study.testng.SignupTest -->
+    </test> <!-- GroupingTest1 -->
+  </suite> <!-- Study-Selenium2 -->
 </testng-results>

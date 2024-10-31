@@ -42,9 +42,6 @@ public class Alerts_2 extends BaseClass{
 		Thread.sleep(2000);
 		alert2.accept();
 		
-		
-		
-		
 		closeDriver();
 	}
 

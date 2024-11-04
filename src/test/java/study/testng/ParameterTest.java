@@ -34,7 +34,7 @@ public class ParameterTest {
 	@AfterClass
 	void tearDown() throws Exception {
 		Thread.sleep(5000);
-		driver.close();
+		driver.quit();
 	}
 	
 	@Test(priority=1)

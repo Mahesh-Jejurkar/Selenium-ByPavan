@@ -63,7 +63,6 @@ public class MyListenerClass implements ITestListener{
 	
 	public void onFinish(ITestContext context) {
 		System.out.println("Execution Finished..."+context.getClass());
-		
 		reports.flush();
 	}
 }

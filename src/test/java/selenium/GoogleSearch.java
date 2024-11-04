@@ -14,7 +14,7 @@ public class GoogleSearch extends BaseClass{
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//textarea[@name='q']")).sendKeys("Selenium");
 		Thread.sleep(4000);
-		List<WebElement> searchResult = driver.findElements(By.xpath("//ul[@role='listbox']/li/div/div[2]/div[1]/div[1]/span"));
+		List<WebElement> searchResult = driver.findElements(By.xpath("//ul[@role='listbox']/li//span"));
 		for(WebElement sr : searchResult) {
 			System.out.println(sr.getText());
 		}

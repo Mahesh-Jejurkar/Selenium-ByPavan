@@ -1,5 +1,6 @@
 package pageObjectPackage;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -15,7 +16,7 @@ import org.testng.annotations.Test;
 
 public class LoginTest extends BaseClass {
 
-	// @Test(priority = 1)
+//	@Test(priority = 1)
 	public void test1() {
 		loginpage.enterName("Mahesh Jejurkar");
 		loginpage.enterEmail("mahesh.jejurkar@gmail.com");
@@ -217,8 +218,9 @@ public class LoginTest extends BaseClass {
 		}
 	}
 	
-	@Test
+//	@Test
 	public void testSwitchWindow() {
+		logger.info("Switch between wwindow...");
 		scrollToElement(loginpage.buttonPopupWindow);
 		loginpage.clickPopupWindow();
 		
@@ -233,6 +235,48 @@ public class LoginTest extends BaseClass {
 		}
 	}
 	
+//	@Test
+	public void testSingleFileUpload() throws Exception {
+		scrollToElement(loginpage.buttonUploadSingleFile);
+		Thread.sleep(2000);
+		clickThroghAction(loginpage.buttonUploadSingleFile);
+		Thread.sleep(2000);
+		Runtime.getRuntime().exec("C:\\Users\\Mahesh\\eclipse-workspace\\Selenium-ByPavanKumar\\src\\test\\java\\pageObjectPackage\\fileupload.exe");
+	}
 	
+//	@Test
+	public void testMultiFileUpload() throws Exception {
+		scrollToElement(loginpage.buttonMultiSelectFile);
+		Thread.sleep(2000);
+		clickThroghAction(loginpage.buttonMultiSelectFile);
+		Thread.sleep(2000);
+		Runtime.getRuntime().exec("C:\\Users\\Mahesh\\eclipse-workspace\\Selenium-ByPavanKumar\\src\\test\\java\\pageObjectPackage\\fileupload2.exe");
+	}
+	
+	@Test
+	public void testImageClick() {
+		loginpage.clickImageWikipedia();
+	}
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

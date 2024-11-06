@@ -3,6 +3,7 @@ package pageObjectPackage;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -119,6 +120,23 @@ public class LoginPage {
 	@FindBy (xpath = "//button[text()='Popup Windows']")
 	WebElement buttonPopupWindow;
 	
+	@FindBy (xpath = "//input[@id='singleFileInput']")
+	WebElement buttonUploadSingleFile;
+	
+	@FindBy (xpath = "//input[@id='multipleFilesInput']")
+	WebElement buttonMultiSelectFile;
+	
+	@FindBy (css = "img.wikipedia-icon")
+	public WebElement imageWikipedia;
+	
+	
+	public void clickImageWikipedia() {
+		imageWikipedia.click();
+	}
+	
+	public void clickUploadSingleFile() {
+		buttonUploadSingleFile.sendKeys(Keys.ENTER);
+	}
 	
 	public void clickPopupWindow() {
 		buttonPopupWindow.click();

@@ -2,7 +2,10 @@ package pageObjectPackage;
 
 import java.time.Duration;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,6 +21,7 @@ public class BaseClass {
 	JavascriptExecutor js;
 	Actions action;
 	Select select;
+	Logger logger;
 		
 	@BeforeClass
 	public void setUp() {
@@ -27,6 +31,7 @@ public class BaseClass {
 		loginpage = new LoginPage(driver);
 		action = new Actions(driver);
 		js = (JavascriptExecutor) driver;
+		logger = LogManager.getLogger(this.getClass());
 		
 		driver.get("https://testautomationpractice.blogspot.com/");
 	}
@@ -35,6 +40,15 @@ public class BaseClass {
 	public void tearDown() throws Exception {
 		Thread.sleep(9000);
 		driver.quit();
+	}
+	
+	
+	public void clickThroghAction(WebElement element) {
+		action.moveToElement(element).click(element).build().perform();
+	}
+	
+	public void javaScriptClick(WebElement element) {
+		js.executeScript("arguments[0].click();", element);
 	}
 	
 	public Select select(WebElement element) {

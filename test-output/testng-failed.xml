@@ -5,9 +5,8 @@
     <classes>
       <class name="pageObjectPackage.LoginTest">
         <methods>
-          <include name="getDropdownValues"/>
           <include name="setUp"/>
-          <include name="tearDown"/>
+          <include name="testFileUpload"/>
         </methods>
       </class> <!-- pageObjectPackage.LoginTest -->
     </classes>

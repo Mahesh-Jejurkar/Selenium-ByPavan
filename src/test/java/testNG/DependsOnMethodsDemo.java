@@ -12,7 +12,7 @@ public class DependsOnMethodsDemo {
 	
 	@Test(priority = 2, dependsOnMethods = {"openapp"})
 	void login() {
-		Assert.assertTrue(false);
+		Assert.assertTrue(true);
 	}
 	
 	@Test(priority = 3, dependsOnMethods = {"login"})

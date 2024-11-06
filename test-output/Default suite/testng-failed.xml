@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="pageObjectPackage.LoginTest">
+      <class name="testNG.HardVsSoftAssertions">
         <methods>
-          <include name="setUp"/>
-          <include name="testFileUpload"/>
+          <include name="test_hardassertion"/>
+          <include name="test_softassertion"/>
         </methods>
-      </class> <!-- pageObjectPackage.LoginTest -->
+      </class> <!-- testNG.HardVsSoftAssertions -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

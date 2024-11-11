@@ -2,7 +2,7 @@ package testNG;
 
 import org.testng.annotations.Test;
 
-public class SignupTest {
+public class SignupTest2 {
 	@Test(priority=1, groups= {"regression"})
 	void signupByEmail() {
 		System.out.println("signupByEmail");

@@ -16,7 +16,7 @@ public class FluentWait_1 {
 	public static void main(String[] args) throws Exception {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-	
+		
 		driver.get("https://www.google.co.in/");
 		By locator_searchbox = By.name("q");
 		WebElement searchbox = waitForElementTobeVisible(driver, locator_searchbox);

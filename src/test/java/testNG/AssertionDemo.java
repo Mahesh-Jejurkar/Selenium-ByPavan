@@ -4,16 +4,17 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class AssertionDemo {
+
 	@Test
-	void testTitle() {
+	void test_Title() {
 		String exp_title = "Opencart";
-		String act_title = "Opencart";
+		String act_title = "Opencartt";
+
+		/*
+		 * if (exp_title.equals(act_title)) { System.out.println("Passed..."); } else {
+		 * System.out.println("Failed..."); }
+		 */
 		
-//		if(act_title.equals(exp_title)) {
-//			System.out.println("Test passed...");
-//		}else {
-//			System.out.println("Test failed...");
-//		}
-		Assert.assertEquals(exp_title, act_title);
+		Assert.assertEquals(act_title, exp_title);
 	}
 }

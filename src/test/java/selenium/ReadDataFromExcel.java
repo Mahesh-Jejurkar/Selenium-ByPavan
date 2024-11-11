@@ -2,6 +2,7 @@ package selenium;
 
 import java.io.FileInputStream;
 
+import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -9,27 +10,31 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class ReadDataFromExcel {
 
 	public static void main(String[] args) throws Exception {
-		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "\\input-files\\Book1.xlsx");
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "\\test-data\\Book1.xlsx");
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
-		XSSFSheet sheet = workbook.getSheet("UserData");
-		XSSFRow row = sheet.getRow(0);
-		int noOfRow = sheet.getPhysicalNumberOfRows();
-		int noOfCell = row.getPhysicalNumberOfCells();
+		XSSFSheet sheet = workbook.getSheet("Sheet1");
+		int countRow = sheet.getPhysicalNumberOfRows();
+		int countCell = sheet.getRow(0).getPhysicalNumberOfCells();
+		System.out.println("Total no. of rows : " + countRow);
+		System.out.println("Total no. of cells : " + countCell);
 
-		System.out.println("No. of row: " + noOfRow);
-		System.out.println("No. of cell: " + noOfCell);
+//		int totalRows = sheet.getLastRowNum();
+//		int totalCells = sheet.getRow(1).getLastCellNum();
+//		System.out.println("Total no. of rows : " + totalRows);
+//		System.out.println("Total no. of cells : " + totalCells);
 
-		for (int r = 1; r < noOfRow; r++) {
-			XSSFRow current_row = sheet.getRow(r);
-			
-			String firstname = current_row.getCell(0).getStringCellValue();
-			String lastname = current_row.getCell(1).getStringCellValue();
-			String email = current_row.getCell(2).getStringCellValue();
-			double telephone = current_row.getCell(3).getNumericCellValue();
-			String password = current_row.getCell(4).getStringCellValue();
-			
-			System.out.println(firstname+"\t"+lastname+"\t"+email+"\t"+telephone+"\t"+password);
+		for (int i = 0; i < countRow; i++) {
+			XSSFRow row = sheet.getRow(i);
+			int indCellCount = row.getPhysicalNumberOfCells();
+			for (int j = 0; j < indCellCount; j++) {
+				XSSFCell cell = row.getCell(j);
+				System.out.print(cell.toString() + "\t");
+			}
+			System.out.println();
 		}
+
 		workbook.close();
+		fis.close();
 	}
+
 }

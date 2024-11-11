@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class BrokenLinks_1 {
 
@@ -23,8 +24,9 @@ public class BrokenLinks_1 {
 		int countOtherDomainLink = 0;
 		int countEmptyLink = 0;
 		
-
-		WebDriver driver = new ChromeDriver();
+		ChromeOptions option = new ChromeOptions();
+		option.addArguments("--headless");
+		WebDriver driver = new ChromeDriver(option);
 		driver.manage().window().maximize();
 		driver.get(homepage);
 		Thread.sleep(2000);

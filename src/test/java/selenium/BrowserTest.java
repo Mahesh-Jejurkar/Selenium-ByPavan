@@ -36,7 +36,8 @@ public class BrowserTest {
 		Thread.sleep(2000);
 
 		WebElement button_sbt = driver.findElement(By.xpath("//*[@id='submitbtn']"));
-		System.out.println(button_sbt.getLocation());
+		System.out.println(button_sbt.getLocation().getX());
+		System.out.println(button_sbt.getLocation().getY());
 		System.out.println(button_sbt.getSize());
 		System.out.println(button_sbt.getTagName());
 		System.out.println(button_sbt.getAttribute("class"));

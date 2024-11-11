@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [OrangeHRMSuite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="testNG.MyListenerClass"/>
-  </listeners>
-  <test thread-count="5" name="OrangeHRMTest(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testNG.OrangeHRM_WithListeners">
+      <class name="study.interview.HandleDynamicWebElement">
         <methods>
-          <include name="setup"/>
-          <include name="testURL"/>
-          <include name="testTitle"/>
-          <include name="tearDown"/>
+          <include name="testDynamicWebElement"/>
         </methods>
-      </class> <!-- testNG.OrangeHRM_WithListeners -->
+      </class> <!-- study.interview.HandleDynamicWebElement -->
     </classes>
-  </test> <!-- OrangeHRMTest(failed) -->
-</suite> <!-- Failed suite [OrangeHRMSuite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

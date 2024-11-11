@@ -16,7 +16,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class CheckDropDownSortedOrNot {
 
 	public static void main(String[] args) throws Exception {
-		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;

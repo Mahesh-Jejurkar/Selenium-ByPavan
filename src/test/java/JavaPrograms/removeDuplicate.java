@@ -11,16 +11,15 @@ public class removeDuplicate {
 	
 	public static String removeDuplicateCharacter(String str) {
 		Set<Character> set = new HashSet<>();
-		StringBuffer sf = new StringBuffer();
+		String str2 = "";
 		
 		for(int i=0; i<str.length(); i++) {
-			Character c = str.charAt(i);
-			if(!set.contains(c)) {
-				set.add(c);
-				sf.append(c);
+			Character ch = str.charAt(i);
+			if(!set.contains(ch)) {
+				set.add(ch);
+				str2+=ch;
 			}
 		}
-		return sf.toString();
+		return str2;
 	}
-
 }

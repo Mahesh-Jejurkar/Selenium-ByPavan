@@ -7,9 +7,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-public class Assignment_08 extends BaseClass{
-
-	public static void main(String[] args) throws Exception{
+public class Assignment_08 extends BaseClass
+{
+	public static void main(String[] args) throws Exception
+	{
 		String from_location = "Del";
 		String to_location = "Rod";
 		
@@ -23,11 +24,16 @@ public class Assignment_08 extends BaseClass{
 		input_from.sendKeys(from_location);
 		Thread.sleep(1000);
 		List<WebElement> list_from = driver.findElements(By.xpath("//div[@id='onewaymain']//div[1]/div[1]/ul//p"));
-		for(WebElement from : list_from) {
-			if(from.getText().contains(from_location)) {
+	
+		for(WebElement from : list_from) 
+		{
+			if(from.getText().contains(from_location)) 
+			{
 				from.click();
 				break;
-			}else {
+			}
+			else 
+			{
 				from.click();
 				break;
 			}
@@ -37,11 +43,16 @@ public class Assignment_08 extends BaseClass{
 		input_to.sendKeys(to_location);
 		Thread.sleep(500);
 		List<WebElement> list_to = driver.findElements(By.xpath("//div[@id='onewaymain']//div[1]/div[2]/ul//p"));
-		for(WebElement to : list_to) {
-			if(to.getText().contains(to_location)) {
+		
+		for(WebElement to : list_to) 
+		{
+			if(to.getText().contains(to_location)) 
+			{
 				to.click();
 				break;
-			}else {
+			}
+			else 
+			{
 				to.click();
 				break;
 			}
@@ -61,8 +72,10 @@ public class Assignment_08 extends BaseClass{
 		
 		Thread.sleep(1000);
 		List<WebElement> allDates = driver.findElements(By.xpath("//table[@class='ui-datepicker-calendar']//tbody/tr/td"));
-		for(WebElement date : allDates) {
-			if(date.getText().equals("24")) {
+		for(WebElement date : allDates) 
+		{
+			if(date.getText().equals("24")) 
+			{
 				date.click();
 				break;
 			}

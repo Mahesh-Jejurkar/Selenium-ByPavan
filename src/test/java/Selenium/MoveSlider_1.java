@@ -6,9 +6,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-public class MoveSlider_1 extends BaseClass {
-
-	public static void main(String[] args) throws Exception {
+public class MoveSlider_1 extends BaseClass 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriver driver = getDriver();
 		JavascriptExecutor js = getJavascriptExecutor();
 		Actions act = getActions();
@@ -22,7 +23,8 @@ public class MoveSlider_1 extends BaseClass {
 		WebElement element_sliderhead = driver.findElement(By.xpath("//div[@id='slider']//span"));
 		System.out.println(element_sliderhead.getLocation()); 				// (889, 1081)=>(x, y)
 
-		for (int x=0; x <= 20; x++) {
+		for (int x=0; x <= 20; x++) 
+		{
 			act.dragAndDropBy(element_sliderhead,x,0).build().perform(); 	// Here we don't want to move Y axis hence we kept.
 		}
 		System.out.println(element_sliderhead.getLocation());

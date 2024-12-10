@@ -8,9 +8,10 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class HeadlessChrome {
-
-	public static void main(String[] args) throws Exception {
+public class HeadlessChrome 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriverManager.chromedriver().setup();
 		
 		ChromeOptions options = new ChromeOptions();
@@ -25,9 +26,12 @@ public class HeadlessChrome {
 		String actual_title1 = driver.getTitle();
 		String expected_title1 = "OrangeHRM";
 		
-		if(actual_title1.equals(expected_title1)) {
+		if(actual_title1.equals(expected_title1)) 
+		{
 			System.out.println("Application launched...\n Test Passed");
-		}else {
+		}
+		else 
+		{
 			System.out.println("Application failed...\n Test Failed.");
 		}
 		
@@ -43,16 +47,16 @@ public class HeadlessChrome {
 		String actual_title = driver.getTitle();
 		String expected_title = "OrangeHRM";
 		
-		if(actual_title.equals(expected_title)) {
+		if(actual_title.equals(expected_title)) 
+		{
 			System.out.println("User logged in...\n Test Passed.");
-		}else {
+		}
+		else 
+		{
 			System.out.println("User loggin failed...\n Test Failed.");
 		}
-		
-		
-		
+	
 		Thread.sleep(10000);
 		driver.close();
 	}
-
 }

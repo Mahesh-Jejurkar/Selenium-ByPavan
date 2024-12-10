@@ -7,9 +7,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class ConditionalCommands1 {
-
-	public static void main(String[] args) throws Exception {
+public class ConditionalCommands1 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriverManager.chromedriver().setup();
 
 		WebDriver driver = new ChromeDriver();
@@ -25,12 +26,15 @@ public class ConditionalCommands1 {
 		WebElement elementSubmit = driver.findElement(By.name("submit"));
 		boolean submit = elementSubmit.isDisplayed();
 
-		if (username == true && password == true && submit == true) {
+		if (username == true && password == true && submit == true) 
+		{
 			elementUsername.sendKeys("Chikku");
 			elementPassword.sendKeys("Chikku");
 			elementSubmit.click();
 			System.out.println(driver.getTitle());
-		} else {
+		} 
+		else 
+		{
 			System.out.println("Webelement not displayed...");
 		}
 

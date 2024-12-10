@@ -11,9 +11,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 
-public class OpenLinkInNewTab_2 {
+public class OpenLinkInNewTab_2 
+{
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws Exception 
+	{
 		String combinedactionkeys = Keys.chord(Keys.CONTROL, Keys.ENTER);
 		
 		WebDriver driver = new ChromeDriver();
@@ -45,5 +47,4 @@ public class OpenLinkInNewTab_2 {
 		Thread.sleep(5000);
 		driver.quit();
 	}
-
 }

@@ -11,11 +11,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
-public class CaptureScreenshot_1 {
-
-	public static void main(String[] args) throws Exception {
+public class CaptureScreenshot_1 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriver driver = new ChromeDriver();
-		TakesScreenshot screenshot = (TakesScreenshot)driver;
+		TakesScreenshot screenshot = (TakesScreenshot)driver;	
 		
 		driver.manage().window().maximize();
 		driver.get("https://www.opencart.com/");
@@ -40,9 +41,7 @@ public class CaptureScreenshot_1 {
 		File tgt3 = new File(".\\screenshot\\opencartdevice.jpg");
 		FileUtils.copyFile(src3, tgt3);
 		
-		
 		Thread.sleep(5000);
 		driver.close();
 	}
-
 }

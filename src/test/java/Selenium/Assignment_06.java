@@ -10,9 +10,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
-public class Assignment_06 extends BaseClass {
-
-	public static void main(String[] args) throws Exception {
+public class Assignment_06 extends BaseClass 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriver driver = getDriver();
 		driver.get("https://blazedemo.com/");
 		Thread.sleep(2000);
@@ -33,7 +34,9 @@ public class Assignment_06 extends BaseClass {
 		List<WebElement> list_price = driver.findElements(By.xpath("//tbody//tr//td[6]"));
 		int list_priceSize = list_price.size();
 		List<String> list_priceValue = new ArrayList<String>();
-		for (WebElement price : list_price) {
+		
+		for (WebElement price : list_price) 
+		{
 			list_priceValue.add(price.getText());
 		}
 
@@ -43,9 +46,11 @@ public class Assignment_06 extends BaseClass {
 		System.out.println(lowestPrice);
 
 		// Clicking on lowest price button.
-		for (int r = 1; r <= list_priceSize; r++) {
+		for (int r = 1; r <= list_priceSize; r++) 
+		{
 			String price = driver.findElement(By.xpath("//tbody//tr[" + r + "]//td[6]")).getText();
-			if (price.equals(lowestPrice)) {
+			if (price.equals(lowestPrice)) 
+			{
 				driver.findElement(By.xpath("//tbody//tr[" + r + "]//td[1]/input")).click();
 				break;
 			}
@@ -80,10 +85,13 @@ public class Assignment_06 extends BaseClass {
 		String actual_confirmationMsg = driver.findElement(By.xpath("//div[@class='container']//h1")).getText();
 		String expected_confirmationMsg = "Thank you for your purchase today!";
 
-		if (actual_confirmationMsg.equals(expected_confirmationMsg)) {
+		if (actual_confirmationMsg.equals(expected_confirmationMsg)) 
+		{
 			System.out.println("Test paased...");
 			Assert.assertTrue(true);
-		} else {
+		} 
+		else 
+		{
 			System.out.println("Test failed...");
 			Assert.assertTrue(false);
 		}

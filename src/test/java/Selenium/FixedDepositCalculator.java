@@ -13,10 +13,12 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class FixedDepositCalculator extends ExcelUtils {
+public class FixedDepositCalculator extends ExcelUtils 
+{
 	@Test(dataProvider = "getTestData")
 	public void launchApp(String principle, String roi, String tenure, String tenurePeriod, String frequency,
-			String EMV, int currentRow, int cellAMV, int cellResult) throws Exception {
+			String EMV, int currentRow, int cellAMV, int cellResult) throws Exception 
+	{
 
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
@@ -49,10 +51,13 @@ public class FixedDepositCalculator extends ExcelUtils {
 		String AMV = we_maturityvalue.getText();
 		updateAMV(currentRow, cellAMV, AMV);
 
-		if (AMV.equals(EMV)) {
+		if (AMV.equals(EMV)) 
+		{
 			updateResult(currentRow, cellResult, "Pass");
 			fillGreenColor(currentRow, cellResult);
-		} else {
+		} 
+		else 
+		{
 			updateResult(currentRow, cellResult, "Fail");
 			fillRedColor(currentRow, cellResult);
 		}
@@ -62,7 +67,8 @@ public class FixedDepositCalculator extends ExcelUtils {
 	}
 
 	@DataProvider(name = "getTestData")
-	public Object[][] getTestData() throws Exception {
+	public Object[][] getTestData() throws Exception 
+	{
 		String filePath = System.getProperty("user.dir") + "\\test-data\\TestData_FixedDeposit.xlsx";
 		String sheetName = "Sheet1";
 
@@ -71,7 +77,8 @@ public class FixedDepositCalculator extends ExcelUtils {
 
 		Object[][] obj = new Object[rowCount - 1][cellCount + 1];
 
-		for (int i = 0; i < rowCount - 1; i++) {
+		for (int i = 0; i < rowCount - 1; i++) 
+		{
 			int row = i + 1;
 			String[] principle = (getCellData(filePath, sheetName, row, 0)).split("\\.");
 			String roi = getCellData(filePath, sheetName, row, 1);
@@ -96,7 +103,8 @@ public class FixedDepositCalculator extends ExcelUtils {
 		return obj;
 	}
 
-	public Boolean updateAMV(int currentRow, int cellAMV, String AMV) throws Exception {
+	public Boolean updateAMV(int currentRow, int cellAMV, String AMV) throws Exception 
+	{
 		String filePath = System.getProperty("user.dir") + "\\test-data\\TestData_FixedDeposit.xlsx";
 		String sheetName = "Sheet1";
 
@@ -104,7 +112,8 @@ public class FixedDepositCalculator extends ExcelUtils {
 		return result;
 	}
 
-	public Boolean updateResult(int currentRow, int cellResult, String result) throws Exception {
+	public Boolean updateResult(int currentRow, int cellResult, String result) throws Exception 
+	{
 		String filePath = System.getProperty("user.dir") + "\\test-data\\TestData_FixedDeposit.xlsx";
 		String sheetName = "Sheet1";
 
@@ -112,13 +121,15 @@ public class FixedDepositCalculator extends ExcelUtils {
 		return rresult;
 	}
 
-	public void fillGreenColor(int row, int cell) throws Exception {
+	public void fillGreenColor(int row, int cell) throws Exception 
+	{
 		String filePath = System.getProperty("user.dir") + "\\test-data\\TestData_FixedDeposit.xlsx";
 		String sheetName = "Sheet1";
 		fillGreenColor(filePath, sheetName, row, cell);
 	}
 
-	public void fillRedColor(int row, int cell) throws Exception {
+	public void fillRedColor(int row, int cell) throws Exception 
+	{
 		String filePath = System.getProperty("user.dir") + "\\test-data\\TestData_FixedDeposit.xlsx";
 		String sheetName = "Sheet1";
 		fillRedColor(filePath, sheetName, row, cell);

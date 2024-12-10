@@ -5,9 +5,10 @@ import java.util.Iterator;
 import java.util.Map.Entry;
 import java.util.Set.*;
 
-public class HashMapDemo3 {
-
-	public static void main(String[] args) {
+public class HashMapDemo3 
+{
+	public static void main(String[] args) 
+	{
 		//Declaration
 		//HashMap hm = new HashMap();	Allows heterogeneous data
 		
@@ -43,14 +44,16 @@ public class HashMapDemo3 {
 		
 		//Reading data from hashmap
 		//Using for each loop
-		for(int k : hm.keySet()) {
+		for(int k : hm.keySet()) 
+		{
 			System.out.println(k+" "+hm.get(k));
 		}
 		
 		//Using iterator
 		System.out.println("Iterator way of printing: ");
 		Iterator<Entry<Integer, String>> it = hm.entrySet().iterator();
-		while(it.hasNext()) {
+		while(it.hasNext()) 
+		{
 			System.out.println(it.next());
 		}
 		

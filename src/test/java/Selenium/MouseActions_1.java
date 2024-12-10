@@ -6,9 +6,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
-public class MouseActions_1 extends BaseClass {
-
-	public static void main(String[] args) throws Exception {
+public class MouseActions_1 extends BaseClass 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriver driver = getDriver();
 		Actions action = getActions();
 		
@@ -54,10 +55,13 @@ public class MouseActions_1 extends BaseClass {
 		textOfField1 = input_field1.getAttribute("value");
 		textOfField2 = input_field2.getAttribute("value");
 		
-		if(textOfField2.equals(textOfField1)) {
+		if(textOfField2.equals(textOfField1)) 
+		{
 			System.out.println(" Text are equal. \n Test passed...");
 			Assert.assertTrue(true);
-		}else {
+		}
+		else 
+		{
 			System.out.println("Text are not equal. \n Test failed...");
 			Assert.assertTrue(false);
 		}

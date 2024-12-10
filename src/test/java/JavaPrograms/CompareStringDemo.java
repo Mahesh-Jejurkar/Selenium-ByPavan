@@ -1,19 +1,26 @@
 package JavaPrograms;
 
-public class CompareStringDemo {
-
+public class CompareStringDemo 
+{
 	@SuppressWarnings("unused")
-	public static boolean compareTwoString(String str1, String str2) {
+	public static boolean compareTwoString(String str1, String str2) 
+	{
 		int str1Lenght = str1.length();
 		int str2Length = str2.length();
 
-		if (str1Lenght != str2Length) {
+		if (str1Lenght != str2Length) 
+		{
 			return false;
-		} else {
-			for (int i = 0; i < str1Lenght; i++) {
-				if (str1.charAt(i) != str2.charAt(i)) {
+		} 
+		else 
+		{
+			for (int i = 0; i < str1Lenght; i++) 
+			{
+				if (str1.charAt(i) != str2.charAt(i)) 
+				{
 					return false;
-				} else {
+				} else 
+				{
 					return true;
 				}
 			}
@@ -21,7 +28,8 @@ public class CompareStringDemo {
 		return true;
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		System.out.println(compareTwoString("Mahesh", "Mahesh"));
 	}
 }

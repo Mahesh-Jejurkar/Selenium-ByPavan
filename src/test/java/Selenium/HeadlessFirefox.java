@@ -6,9 +6,10 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class HeadlessFirefox {
-
-	public static void main(String[] args) throws Exception {
+public class HeadlessFirefox 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriverManager.firefoxdriver().setup();
 		
 		FirefoxOptions options = new FirefoxOptions();
@@ -25,7 +26,5 @@ public class HeadlessFirefox {
 		 
 		 Thread.sleep(9000);
 		 driver.close();
-
 	}
-
 }

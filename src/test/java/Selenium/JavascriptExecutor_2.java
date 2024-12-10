@@ -13,9 +13,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class JavascriptExecutor_2 {
-
-	public static void main(String[] args) throws Exception {
+public class JavascriptExecutor_2 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriver driver = new ChromeDriver();
 
 		driver.manage().window().maximize();
@@ -79,19 +80,20 @@ public class JavascriptExecutor_2 {
 		Thread.sleep(9000);
 		driver.close();
 	}
-
 }
 
-class JavascriptUtilities {
-
-	public static String getDateTime() {
+class JavascriptUtilities 
+{
+	public static String getDateTime() 
+	{
 		LocalDateTime currentDate = LocalDateTime.now();
 		DateTimeFormatter expectedFormat = DateTimeFormatter.ofPattern("dd_MM_yyyy_HH_mm_ss");
 		String dateTime = currentDate.format(expectedFormat);
 		return "-" + dateTime;
 	}
 
-	public static void takeScreenshot(WebDriver driver, String name) throws Exception {
+	public static void takeScreenshot(WebDriver driver, String name) throws Exception 
+	{
 		String filename = name + getDateTime();
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File screenshot = ts.getScreenshotAs(OutputType.FILE);
@@ -99,7 +101,8 @@ class JavascriptUtilities {
 		FileUtils.copyFile(screenshot, storeAt);
 	}
 
-	public static void flashElement(WebDriver driver, WebElement element) throws Exception {
+	public static void flashElement(WebDriver driver, WebElement element) throws Exception 
+	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		String background_color = element.getCssValue("backgroundColor");
 		for (int i = 1; i <=5 ; i++) {
@@ -110,59 +113,70 @@ class JavascriptUtilities {
 		}
 	}
 
-	public static void drawBorder(WebDriver driver, WebElement element) {
+	public static void drawBorder(WebDriver driver, WebElement element) 
+	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].style.border=arguments[1]", element, "3px solid red");
 	}
 
-	public static String getTitle(WebDriver driver) {
+	public static String getTitle(WebDriver driver) 
+	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		String title = js.executeScript("return document.title").toString();
 		return title;
 	}
 
-	public static void refreshPage(WebDriver driver) {
+	public static void refreshPage(WebDriver driver) 
+	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("history.go(0)");
 	}
 	
-	public static void clickElement(WebDriver driver, WebElement element) {
+	public static void clickElement(WebDriver driver, WebElement element) 
+	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", element);
 	}
 	
-	public static void scrollToElement(WebDriver driver, WebElement element) {
+	public static void scrollToElement(WebDriver driver, WebElement element) 
+	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView()", element);
 	}
 	
-	public static void scrollToPixel(WebDriver driver, String pixel_value) {
+	public static void scrollToPixel(WebDriver driver, String pixel_value) 
+	{
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("window.scrollTo(0, arguments[0])", pixel_value);
 	}
 
-	public static void scrollToBottom(WebDriver driver) {
+	public static void scrollToBottom(WebDriver driver) 
+	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 	}
 
-	public static void scrollToTop(WebDriver driver) {
+	public static void scrollToTop(WebDriver driver) 
+	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollTo(0, -document.body.scrollHeight)");
 		//js.executeScript("window.scrollTo(0,0)");
 	}
 
-	public static void zoomPage(WebDriver driver, String zoomPercentage) {
+	public static void zoomPage(WebDriver driver, String zoomPercentage) 
+	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("document.body.style.zoom=arguments[0]", zoomPercentage);
 	}
 
-	public static void generateAlert(WebDriver driver, String message) {
+	public static void generateAlert(WebDriver driver, String message) 
+	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("alert('" + message + "')");
 	}
 
-	public static void acceptAlert(WebDriver driver) {
+	public static void acceptAlert(WebDriver driver) 
+	{
 		driver.switchTo().alert().accept();
 	}
 }

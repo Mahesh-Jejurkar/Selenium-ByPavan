@@ -4,9 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class Assignment_04 extends BaseClass{
-
-	public static void main(String[] args) throws Exception{
+public class Assignment_04 extends BaseClass
+{
+	public static void main(String[] args) throws Exception
+	{
 		WebDriver driver = getDriver();
 		driver.get("https://ui.vision/demo/webtest/frames/");
 		
@@ -53,5 +54,4 @@ public class Assignment_04 extends BaseClass{
 		closeDriver();
 
 	}
-
 }

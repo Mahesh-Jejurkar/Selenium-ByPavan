@@ -12,15 +12,16 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
 
-public class BaseClass{
-	
+public class BaseClass
+{	
 	public static WebDriver driver;
 	public static ChromeOptions options;
 	public static Wait<WebDriver> myFluentWait;
 	public static Actions action;
 	public static JavascriptExecutor js;
 
-	public static WebDriver getDriver() throws Exception {
+	public static WebDriver getDriver() throws Exception 
+	{
 //		File crx_selectorshub = new File (System.getProperty("user.dir")+"\\input-files\\SelectorsHub.crx");
 //		File crx_addblocker = new File (System.getProperty("user.dir")+"\\input-files\\AdBlocker.crx");
 //		List<File> crxfiles = new ArrayList<File>();
@@ -43,12 +44,14 @@ public class BaseClass{
 		return driver;
 	}
 	
-	public static WebDriverWait myExplicitWait() {
+	public static WebDriverWait myExplicitWait() 
+	{
 		WebDriverWait myExplicitWait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		return myExplicitWait;
 	}
 	
-	public static Wait<WebDriver> myFluentWait() {
+	public static Wait<WebDriver> myFluentWait() 
+	{
 		myFluentWait = new FluentWait<WebDriver>(driver)
 				.withTimeout(Duration.ofSeconds(10))
 				.pollingEvery(Duration.ofSeconds(2))
@@ -56,29 +59,34 @@ public class BaseClass{
 		return myFluentWait; 
 	}
 	
-	public static JavascriptExecutor getJavascriptExecutor() {
+	public static JavascriptExecutor getJavascriptExecutor() 
+	{
 		js = (JavascriptExecutor) driver;
 		return js;
 	}
 	
-	public static Actions getActions() {
+	public static Actions getActions() 
+	{
 		action = new Actions(driver);
 		return action;
 	}
 
-	public static void closeDriver() throws Exception {
+	public static void closeDriver() throws Exception 
+	{
 		Thread.sleep(9000);
 		driver.quit();
 	}
 	
-	public static String getDateTime() {
+	public static String getDateTime() 
+	{
 		LocalDateTime currentDate = LocalDateTime.now();
 		DateTimeFormatter expectedFormat = DateTimeFormatter.ofPattern("dd_MM_yyyy_HH_mm_ss");
 		String dateTime = currentDate.format(expectedFormat);
 		return dateTime;
 	}
 	
-	public static void changeColor(WebDriver driver , WebElement element) throws Exception {
+	public static void changeColor(WebDriver driver , WebElement element) throws Exception 
+	{
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].style.backgroundColor='rgba(0, 255, 0, 1)'", element);
 		Thread.sleep(1000);

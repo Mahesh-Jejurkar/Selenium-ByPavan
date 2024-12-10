@@ -2,9 +2,11 @@ package JavaPrograms;
 
 import java.util.ArrayList;
 
-public class Study03ArrayList {
+public class Study03ArrayList 
+{
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		ArrayList<String> at = new ArrayList<String>();
 		System.out.println(at.size() + " => " + at);
 		at.add("M");

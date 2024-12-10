@@ -3,9 +3,10 @@ package Selenium;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class SVGElement extends BaseClass{
-
-	public static void main(String[] args) throws Exception{
+public class SVGElement extends BaseClass
+{
+	public static void main(String[] args) throws Exception
+	{
 		WebDriver driver = getDriver();
 		
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");

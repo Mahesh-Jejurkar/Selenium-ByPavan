@@ -8,9 +8,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class DatePicker_3 {
-
-	public static void main(String[] args) throws Exception {
+public class DatePicker_3 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		String date = "15";
 		String month = "September";
 		String year = "2026";
@@ -27,12 +28,14 @@ public class DatePicker_3 {
 		driver.findElement(By.xpath("//input[@id='datepicker']")).click();
 		Thread.sleep(500);
 
-		while (true) {
+		while (true) 
+		{
 			Thread.sleep(300);
 			String current_month = driver.findElement(By.xpath("//div[@class='ui-datepicker-title']/span[1]")).getText();
 			String current_year = driver.findElement(By.xpath("//div[@class='ui-datepicker-title']/span[2]")).getText();
 			
-			if (current_year.equals(year) && current_month.equals(month)) {
+			if (current_year.equals(year) && current_month.equals(month)) 
+			{
 				break;
 			}
 			//Click on next button
@@ -40,9 +43,11 @@ public class DatePicker_3 {
 		}
 		
 		List<WebElement> alldates = driver.findElements(By.xpath("//table[@class='ui-datepicker-calendar']/tbody/tr/td/a"));
-		for(WebElement d : alldates) {
+		for(WebElement d : alldates) 
+		{
 			String current_date = d.getText();
-			if(current_date.equals(date)) {
+			if(current_date.equals(date)) 
+			{
 				d.click();
 				break;
 			}

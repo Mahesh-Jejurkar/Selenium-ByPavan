@@ -5,9 +5,10 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class ReadWebTable_3 extends BaseClass {
-
-	public static void main(String[] args) throws Exception {
+public class ReadWebTable_3 extends BaseClass 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriver driver = getDriver();
 		JavascriptExecutor js = getJavascriptExecutor();
 		driver.get("https://testautomationpractice.blogspot.com/");
@@ -26,8 +27,10 @@ public class ReadWebTable_3 extends BaseClass {
 		System.out.println("No. of columns : " + column);
 
 		// Get all table data
-		for (int r = 2; r <= row; r++) {
-			for (int c = 1; c <= column; c++) {
+		for (int r = 2; r <= row; r++) 
+		{
+			for (int c = 1; c <= column; c++) 
+			{
 				WebElement el_data = table_book.findElement(By.xpath("//tr[" + r + "]//td[" + c + "]"));
 				String originalColor = (String) js
 						.executeScript("return window.getComputedStyle(arguments[0]).backgroundColor;", el_data);
@@ -43,10 +46,12 @@ public class ReadWebTable_3 extends BaseClass {
 		Thread.sleep(2000);
 
 		// Get data based on condition. here name of book written by author Mukesh
-		for (int r = 2; r <= row; r++) {
+		for (int r = 2; r <= row; r++) 
+		{
 			String authorname = driver.findElement(By.xpath("//table[@name='BookTable']//tr[" + r + "]//td[2]"))
 					.getText();
-			if (authorname.equalsIgnoreCase("Mukesh")) {
+			if (authorname.equalsIgnoreCase("Mukesh")) 
+			{
 				WebElement el_data = table_book.findElement(By.xpath("//tr[" + r + "]//td[1]"));
 				String data = el_data.getText();
 				System.out.print(data + "\t");
@@ -63,7 +68,8 @@ public class ReadWebTable_3 extends BaseClass {
 		Thread.sleep(2000);
 		// Get price of all the books.
 		int totalPrice = 0;
-		for (int r = 2; r <= row; r++) {
+		for (int r = 2; r <= row; r++) 
+		{
 
 			WebElement we_price = table_book.findElement(By.xpath("//tr[" + r + "]//td[4]"));
 			String price = we_price.getText();

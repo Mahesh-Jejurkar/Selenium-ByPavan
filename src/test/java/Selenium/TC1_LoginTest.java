@@ -10,9 +10,11 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class TC1_LoginTest {
+public class TC1_LoginTest 
+{
 	@Test
-	public void testLoginData1() throws Exception {
+	public void testLoginData1() throws Exception 
+	{
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));

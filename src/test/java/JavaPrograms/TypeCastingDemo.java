@@ -8,9 +8,10 @@ package JavaPrograms;
 //i.e long -> int
 // double -> float
 
-public class TypeCastingDemo {
-
-	public static void main(String[] args) {
+public class TypeCastingDemo 
+{
+	public static void main(String[] args) 
+	{
 		//Upcasting => Automatic => smaller to larger
 		int intvalue = 100;
 		int longvalue = intvalue;
@@ -34,5 +35,4 @@ public class TypeCastingDemo {
 		int intvalue3 = (int)doublevalue3;
 		System.out.println(intvalue3);
 	}
-
 }

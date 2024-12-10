@@ -9,11 +9,13 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class Cookies {
+public class Cookies
+{
 	WebDriver driver;
 
 	@BeforeClass
-	public void setUp() throws Exception {
+	public void setUp() throws Exception 
+	{
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https:www.google.com");
@@ -21,24 +23,28 @@ public class Cookies {
 	}
 
 	@AfterClass
-	public void tearDown() throws Exception {
+	public void tearDown() throws Exception 
+	{
 		Thread.sleep(10000);
 		driver.close();
 	}
 
 	@Test(priority = 1)
-	public void getAllCookies() {
+	public void getAllCookies() 
+	{
 		System.out.println("*****Get All Cookies*****");
 		Set<Cookie> allCookies = driver.manage().getCookies();
 		System.out.println("Cookie size: " + allCookies.size());
 
-		for (Cookie ck : allCookies) {
+		for (Cookie ck : allCookies) 
+		{
 			System.out.println(ck);
 		}
 	}
 
 	@Test(priority = 2)
-	public void addCookie() {
+	public void addCookie() 
+	{
 		System.out.println("*****Add New Cookie*****");
 		Cookie myCookie = new Cookie("Mahesh", "mahesh@1990");
 		driver.manage().addCookie(myCookie);
@@ -46,20 +52,23 @@ public class Cookies {
 		Set<Cookie> allCookies = driver.manage().getCookies();
 		System.out.println("Cookie size after addition: " + allCookies.size());
 
-		for (Cookie ck : allCookies) {
+		for (Cookie ck : allCookies) 
+		{
 			System.out.println(ck);
 		}
 	}
 
 	@Test(priority = 3)
-	public void getSpecificCookie() {
+	public void getSpecificCookie() 
+	{
 		System.out.println("*****Get Specific Cookie*****");
 		Cookie ck = driver.manage().getCookieNamed("Mahesh");
 		System.out.println(ck);
 	}
 
 //	@Test(priority = 4)
-	public void deleteSpecificCookie() {
+	public void deleteSpecificCookie() 
+	{
 		System.out.println("*****Delete Specific Cookie*****");
 		driver.manage().deleteCookieNamed("Mahesh");
 	}
@@ -71,16 +80,21 @@ public class Cookies {
 	}
 
 	@Test(priority = 5)
-	public void getAllCookies2() {
+	public void getAllCookies2() 
+	{
 		System.out.println("*****Get All Cookies*****");
 		Set<Cookie> allCookies = driver.manage().getCookies();
 		System.out.println("Cookie size: "+allCookies.size());
 		
-		if(allCookies.size()!=0) {
-			for (Cookie ck : allCookies) {
+		if(allCookies.size()!=0) 
+		{
+			for (Cookie ck : allCookies) 
+			{
 				System.out.println(ck);
 			}
-		}else {
+		}
+		else 
+		{
 			System.out.println("No cookies to display...");
 		}
 	}

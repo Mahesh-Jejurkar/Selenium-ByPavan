@@ -4,9 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Locator_name {
-
-	public static void main(String[] args) throws Exception {
+public class Locator_name 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		
@@ -19,5 +20,4 @@ public class Locator_name {
 		Thread.sleep(8000);
 		driver.close();
 	}
-
 }

@@ -2,9 +2,10 @@ package JavaPrograms;
 
 import java.util.*;
 
-public class FindDuplicateValues {
-
-	public static void main(String[] args) {
+public class FindDuplicateValues 
+{
+	public static void main(String[] args) 
+	{
 		
 		Map<Integer, String> map = new HashMap<>();
 		map.put(1, "Apple");
@@ -16,23 +17,29 @@ public class FindDuplicateValues {
 		findDuplicates(map);
 	}
 	
-	public static void findDuplicates(Map<Integer, String> map) {
+	public static void findDuplicates(Map<Integer, String> map) 
+	{
 		Set<String> uniqueValues = new HashSet<>();
 		Set<String> duplicates = new HashSet<>();
 		
-		for(String value : map.values()) {
-			if(!uniqueValues.add(value)) {
+		for(String value : map.values()) 
+		{
+			if(!uniqueValues.add(value)) 
+			{
 				duplicates.add(value);
 			}
 		}
 
 
-	if(duplicates.isEmpty()) {
+	if(duplicates.isEmpty()) 
+	{
 		System.out.println("No duplicate found...");
 		
-	}else {
+	}
+	else 
+	{
 		System.out.println("Duplicate values:" +duplicates);
 	}
 	
-	}
+ }
 }

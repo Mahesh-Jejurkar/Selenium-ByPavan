@@ -7,9 +7,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class Assignment_01 extends BaseClass {
-
-	public static void main(String[] args) throws Exception {
+public class Assignment_01 extends BaseClass 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriver driver = getDriver();
 		driver.get("https://testautomationpractice.blogspot.com/");
 		Thread.sleep(2000);
@@ -23,7 +24,8 @@ public class Assignment_01 extends BaseClass {
 		int totalSearchResult = searchResult.size();
 		System.out.println("Total no. of links searched : " + totalSearchResult);
 
-		for (WebElement sr : searchResult) {
+		for (WebElement sr : searchResult) 
+		{
 			Thread.sleep(2000);
 			String linkName = sr.getText();
 			String linkAddress = sr.getAttribute("href");
@@ -34,17 +36,20 @@ public class Assignment_01 extends BaseClass {
 		System.out.println();
 		Set<String> windowHandles = driver.getWindowHandles();
 
-		for (String wh : windowHandles) {
+		for (String wh : windowHandles) 
+		{
 			String windowTitle = driver.switchTo().window(wh).getTitle();
 			System.out.println(windowTitle + " : " + wh);
 		}
 
 		Thread.sleep(7000);
 
-		for (String wh : windowHandles) {
+		for (String wh : windowHandles) 
+		{
 			String windowTitle = driver.switchTo().window(wh).getTitle();
 			if (windowTitle.equals("Selenium disulfide - Wikipedia")
-					|| windowTitle.equals("Selenium in biology - Wikipedia")) {
+					|| windowTitle.equals("Selenium in biology - Wikipedia")) 
+			{
 				driver.close();
 			}
 		}

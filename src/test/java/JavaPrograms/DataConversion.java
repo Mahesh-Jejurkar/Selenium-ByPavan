@@ -1,8 +1,9 @@
 package JavaPrograms;
 
-public class DataConversion {
-
-	public static void main(String[] args) {
+public class DataConversion 
+{
+	public static void main(String[] args) 
+	{
 		// Cann't convert to Integer...
 		String s1 = "Welcome";
 		

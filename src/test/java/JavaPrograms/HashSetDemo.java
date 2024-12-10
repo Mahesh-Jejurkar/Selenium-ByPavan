@@ -2,9 +2,10 @@ package JavaPrograms;
 
 import java.util.*;
 
-public class HashSetDemo {
-
-	public static void main(String[] args) {
+public class HashSetDemo 
+{
+	public static void main(String[] args) 
+	{
 		//Declaration
 		HashSet<Object> myset = new HashSet<Object>();
 		//Set<Object> st = new HashSet<Object>();
@@ -44,11 +45,9 @@ public class HashSetDemo {
 		
 		//Read all the elements using iterator.
 		Iterator<Object> it = myset.iterator();
-		while(it.hasNext()) {
+		while(it.hasNext()) 
+		{
 			System.out.println(it.next());
 		}
-		
-		
 	}
-
 }

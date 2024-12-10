@@ -1,13 +1,15 @@
 package JavaPrograms;
 
-public class CallByValue {
-
-	public void m1(int number) {
+public class CallByValue 
+{
+	public void m1(int number) 
+	{
 		number = number + 10;
 		System.out.println("Value of number in a method m1: " + number);
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		CallByValue cv = new CallByValue();
 
 		int number = 100;

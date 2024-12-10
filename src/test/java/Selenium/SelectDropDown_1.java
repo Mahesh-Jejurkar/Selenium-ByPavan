@@ -7,9 +7,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-public class SelectDropDown_1 extends BaseClass{
-
-	public static void main(String[] args) throws Exception{
+public class SelectDropDown_1 extends BaseClass
+{
+	public static void main(String[] args) throws Exception
+	{
 		WebDriver driver = getDriver();
 		driver.get("https://testautomationpractice.blogspot.com/");
 		Thread.sleep(2000);
@@ -22,7 +23,8 @@ public class SelectDropDown_1 extends BaseClass{
 		System.out.println("First selected option : "+firstSelectedOption.getText());
 		
 		List<WebElement> listCountry = select_country.getOptions();
-		for( WebElement country : listCountry) {
+		for( WebElement country : listCountry) 
+		{
 			System.out.println(country.getText());
 		}
 				
@@ -36,12 +38,11 @@ public class SelectDropDown_1 extends BaseClass{
 		
 		
 		List<WebElement> selectedOptions = select_country.getAllSelectedOptions();
-		for(WebElement option : selectedOptions) {
+		for(WebElement option : selectedOptions) 
+		{
 			System.out.println(option.getText());
 		}
 		
-		
 		System.out.println(select_country.isMultiple());
 	}
-
 }

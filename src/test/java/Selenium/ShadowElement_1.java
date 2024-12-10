@@ -4,9 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
 
-public class ShadowElement_1 extends BaseClass{
-
-	public static void main(String[] args) throws Exception{
+public class ShadowElement_1 extends BaseClass
+{
+	public static void main(String[] args) throws Exception
+	{
 		WebDriver driver = getDriver();
 		
 		driver.get("https://dev.automationtesting.in/shadow-dom");
@@ -30,7 +31,6 @@ public class ShadowElement_1 extends BaseClass{
 		Thread.sleep(2000);
 		String text3 =shadowroot3.findElement(By.cssSelector("#multi-nested-shadow-element")).getText();
 		System.out.println(text3);
-		
 		
 		closeDriver();
 	}

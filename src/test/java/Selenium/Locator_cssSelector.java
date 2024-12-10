@@ -6,9 +6,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Locator_cssSelector {
-
-	public static void main(String[] args) throws Exception {
+public class Locator_cssSelector 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
@@ -26,12 +27,8 @@ public class Locator_cssSelector {
 		 */
 		
 		driver.findElement(By.xpath("//span[normalize-space()='My Account']")).click();
-		
-		
-		
-		
+			
 		Thread.sleep(5000);
 		driver.close();
 	}
-
 }

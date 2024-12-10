@@ -6,9 +6,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class AutoCompleteGooglePlacesDropDown {
-
-	public static void main(String[] args) throws Exception {
+public class AutoCompleteGooglePlacesDropDown 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.twoplugs.com/newsearchserviceneed");
@@ -19,18 +20,19 @@ public class AutoCompleteGooglePlacesDropDown {
 		
 		String text;
 		
-		do {
+		do 
+		{
 			searchbox.sendKeys(Keys.ARROW_DOWN);
 			Thread.sleep(1000);
 			text = searchbox.getAttribute("value");
 			Thread.sleep(1000);
-			if(text.equals("Toronto, OH, USA")) {
+			if(text.equals("Toronto, OH, USA")) 
+			{
 				searchbox.sendKeys(Keys.ENTER);
 				break;
 			}
 		}while(!text.isEmpty());
 	
-		
 		Thread.sleep(9000);
 		driver.close();
 	}

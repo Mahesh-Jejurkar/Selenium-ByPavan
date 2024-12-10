@@ -10,9 +10,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class ExplicitWait_1 {
-
-	public static void main(String[] args) throws Exception {
+public class ExplicitWait_1 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		
@@ -31,10 +32,10 @@ public class ExplicitWait_1 {
 		driver.close();
 	}
 	
-	public static WebElement waitForElementTobeVisible(WebDriver driver, By locator) {
+	public static WebElement waitForElementTobeVisible(WebDriver driver, By locator) 
+	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement webelement = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 		return webelement;
 	}
-
 }

@@ -5,9 +5,10 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class JavascriptExecutor_1{
-
-	public static void main(String[] args) throws Exception{
+public class JavascriptExecutor_1
+{
+	public static void main(String[] args) throws Exception
+	{
 //		WebDriver driver = new ChromeDriver();
 //		JavascriptExecutor js = (JavascriptExecutor)driver;
 		
@@ -55,5 +56,4 @@ public class JavascriptExecutor_1{
 		Thread.sleep(5000);
 		driver.close();
 	}
-
 }

@@ -4,9 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class FileUpload extends BaseClass{
-
-	public static void main(String[] args) throws Exception{
+public class FileUpload extends BaseClass
+{
+	public static void main(String[] args) throws Exception
+	{
 		WebDriver driver = getDriver();
 		
 		driver.get("https://demo.guru99.com/test/upload/");
@@ -21,9 +22,12 @@ public class FileUpload extends BaseClass{
 		String actual_msg = driver.findElement(By.xpath("//div[@class='formbuttons'][2]/h3")).getText();
 		String expected_msg = "has been successfully uploaded";
 		
-		if(actual_msg.contains(expected_msg)) {
+		if(actual_msg.contains(expected_msg)) 
+		{
 			System.out.println("Test passed...");
-		}else {
+		}
+		else 
+		{
 			System.out.println("Test failed...");
 		}
 		

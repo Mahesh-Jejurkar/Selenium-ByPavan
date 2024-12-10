@@ -2,9 +2,10 @@ package JavaPrograms;
 
 import java.util.Scanner;
 
-public class ExceptionDemo3 {
-
-	public static void main(String[] args) {
+public class ExceptionDemo3 
+{
+	public static void main(String[] args) 
+	{
 		System.out.println("Program is started...");
 		Scanner sc = new Scanner(System.in);
 		
@@ -36,7 +37,6 @@ public class ExceptionDemo3 {
 		String s=null;
 		System.out.println(s.length()); //NullPointerException
 		
-	    
 	    System.out.println("Program is completed...");	    
 	}
 

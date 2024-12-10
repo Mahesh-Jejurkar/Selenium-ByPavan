@@ -1,8 +1,9 @@
 package JavaPrograms;
 
-public class PolymorphismDemo {
-
-	public static void main(String[] args) {
+public class PolymorphismDemo 
+{
+	public static void main(String[] args) 
+	{
 		int addtion1 = addition(2, 5);
 		double addition2 = addition(2, 3.5);
 		double addition3 = addition(2.8, 5.9, 2);
@@ -12,15 +13,18 @@ public class PolymorphismDemo {
 		System.out.println(addition3);
 	}
 	
-	public static int addition(int a, int b) {
+	public static int addition(int a, int b) 
+	{
 		return a + b;
 	}
 	
-	public static double addition(int a, double b) {
+	public static double addition(int a, double b) 
+	{
 		return a + b;
 	}
 	
-	public static double addition(double a, double b, int c) {
+	public static double addition(double a, double b, int c) 
+	{
 		return a + b +c;
 	}
 	

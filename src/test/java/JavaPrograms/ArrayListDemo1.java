@@ -2,7 +2,8 @@ package JavaPrograms;
 
 import java.util.*;
 
-public class ArrayListDemo1 {
+public class ArrayListDemo1 
+{
 
 	public static void main(String[] args) {
 		// ArrayList<Integer> al = new ArrayList<Integer>();
@@ -85,5 +86,4 @@ public class ArrayListDemo1 {
 		al.clear();
 		System.out.println(al);
 	}
-
 }

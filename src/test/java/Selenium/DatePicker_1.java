@@ -6,13 +6,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class DatePicker_1 extends BaseClass {
+public class DatePicker_1 extends BaseClass 
+{
 	static String dd = "1";
 	static String mm = "September";
 	static String yyyy = "2024";
 
-	public static void main(String[] args) throws Exception {
-
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriver driver = getDriver();
 
 		driver.get("https://jqueryui.com/datepicker/");
@@ -34,15 +35,18 @@ public class DatePicker_1 extends BaseClass {
 	}
 	
 
-	public static void selectFuturDate() throws Exception {
-		while (true) {
+	public static void selectFuturDate() throws Exception 
+	{
+		while (true) 
+		{
 			Thread.sleep(500);
 			String current_month = driver.findElement(By.xpath("//div[@class='ui-datepicker-title']//span[1]"))
 					.getText();
 			String current_year = driver.findElement(By.xpath("//div[@class='ui-datepicker-title']//span[2]"))
 					.getText();
 
-			if (current_month.equals(mm) && current_year.equals(yyyy)) {
+			if (current_month.equals(mm) && current_year.equals(yyyy)) 
+			{
 				break;
 			}
 
@@ -50,23 +54,28 @@ public class DatePicker_1 extends BaseClass {
 		}
 		List<WebElement> allDates = driver
 				.findElements(By.xpath("//table[@class='ui-datepicker-calendar']/tbody/tr/td"));
-		for (WebElement date : allDates) {
-			if (date.getText().equals(dd)) {
+		for (WebElement date : allDates) 
+		{
+			if (date.getText().equals(dd)) 
+			{
 				date.click();
 				break;
 			}
 		}	
 	}
 	
-	public static void selectPastDate() throws Exception {
-		while (true) {
+	public static void selectPastDate() throws Exception 
+	{
+		while (true) 
+		{
 			Thread.sleep(500);
 			String current_month = driver.findElement(By.xpath("//div[@class='ui-datepicker-title']//span[1]"))
 					.getText();
 			String current_year = driver.findElement(By.xpath("//div[@class='ui-datepicker-title']//span[2]"))
 					.getText();
 
-			if (current_month.equals(mm) && current_year.equals(yyyy)) {
+			if (current_month.equals(mm) && current_year.equals(yyyy)) 
+			{
 				break;
 			}
 
@@ -74,8 +83,10 @@ public class DatePicker_1 extends BaseClass {
 		}
 		List<WebElement> allDates = driver
 				.findElements(By.xpath("//table[@class='ui-datepicker-calendar']/tbody/tr/td"));
-		for (WebElement date : allDates) {
-			if (date.getText().equals(dd)) {
+		for (WebElement date : allDates) 
+		{
+			if (date.getText().equals(dd)) 
+			{
 				date.click();
 				break;
 			}

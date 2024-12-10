@@ -9,9 +9,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-public class DatePicker_2 extends BaseClass{
-
-	public static void main(String[] args) throws Exception{
+public class DatePicker_2 extends BaseClass
+{
+	public static void main(String[] args) throws Exception
+	{
 		String year = "2022";
 		String month = "February";
 		String day = "24";
@@ -35,7 +36,8 @@ public class DatePicker_2 extends BaseClass{
 		select_year.selectByVisibleText(year);
 		Thread.sleep(500);
 		
-		while(true) {
+		while(true) 
+		{
 			String display_month = driver.findElement(By.xpath("//span[@class='ui-datepicker-month']")).getText();
 			
 			Month expectedMonth	= convertMonthToObject(month);
@@ -43,20 +45,26 @@ public class DatePicker_2 extends BaseClass{
 			
 			int compare_result = expectedMonth.compareTo(currentMonth);
 			
-			if(compare_result < 0) {
+			if(compare_result < 0) 
+			{
 				driver.findElement(By.xpath("//a[@title='Prev']")).click();
 			}
-			else if(compare_result > 0) {
+			else if(compare_result > 0) 
+			{
 				driver.findElement(By.xpath("//a[@title='Next']")).click();
-			}else {
+			}
+			else 
+			{
 				break;
 			}	
 		}
 		
 		List<WebElement> allDates = driver.findElements(By.xpath("//table[@class='ui-datepicker-calendar']/tbody/tr/td"));
-		for(WebElement dd : allDates) {
+		for(WebElement dd : allDates) 
+		{
 			String date = dd.getText();
-			if(date.equals(day)) {
+			if(date.equals(day)) 
+			{
 				dd.click();
 				break;
 			}
@@ -65,7 +73,8 @@ public class DatePicker_2 extends BaseClass{
 		closeDriver();
 	}
 	
-	static Month convertMonthToObject(String month) {
+	static Month convertMonthToObject(String month) 
+	{
 		HashMap<String, Month> monthMap = new HashMap<String, Month>();
 		
 		monthMap.put("January", Month.JANUARY);
@@ -83,7 +92,8 @@ public class DatePicker_2 extends BaseClass{
 		
 		Month month_object = monthMap.get(month);
 		
-		if(month_object==null) {
+		if(month_object==null) 
+		{
 			System.out.println("Invalid month...");
 		}
 		return month_object;

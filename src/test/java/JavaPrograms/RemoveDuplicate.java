@@ -3,7 +3,7 @@ package JavaPrograms;
 import java.util.HashSet;
 import java.util.Set;
 
-public class removeDuplicate {
+public class RemoveDuplicate {
 	
 	public static void main(String[] args) {
 		System.out.println(removeDuplicateCharacter("Mahesh"));

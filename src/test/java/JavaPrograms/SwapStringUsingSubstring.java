@@ -1,8 +1,9 @@
 package JavaPrograms;
 
-public class SwapStringUsingSubstring {
-
-	public static void main(String[] args) {
+public class SwapStringUsingSubstring 
+{
+	public static void main(String[] args)
+	{
 		String str1 = "Hello";
 		String str2 = "World";
 		String str3 = null;
@@ -17,5 +18,4 @@ public class SwapStringUsingSubstring {
 		System.out.println("str1 = " +str1);
 		System.out.println("str2 = " +str2);
 	}
-
 }

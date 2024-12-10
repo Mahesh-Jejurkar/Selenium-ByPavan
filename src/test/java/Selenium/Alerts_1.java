@@ -5,9 +5,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Alerts_1 {
-
-	public static void main(String[] args) throws Exception {
+public class Alerts_1 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 
@@ -21,10 +22,10 @@ public class Alerts_1 {
 
 		Thread.sleep(5000);
 		driver.close();
-
 	}
 
-	public static void clickSimpleAlert(WebDriver driver) throws Exception {
+	public static void clickSimpleAlert(WebDriver driver) throws Exception 
+	{
 		driver.findElement(By.xpath("//button[text()='Click for JS Alert']")).click();
 		Alert alert1 = driver.switchTo().alert();
 		String alert_text1 = alert1.getText();
@@ -34,15 +35,18 @@ public class Alerts_1 {
 		Thread.sleep(1000);
 		String actual_confirmMsg1 = driver.findElement(By.xpath("//p[2]")).getText();
 		String extected_confirmMsg1 = "You successfully clicked an alert";
-		if (actual_confirmMsg1.equals(extected_confirmMsg1)) {
+		if (actual_confirmMsg1.equals(extected_confirmMsg1)) 
+		{
 			System.out.println("Test passed...");
-		} else {
+		} else 
+		{
 			System.out.println("Test failed...");
 		}
 
 	}
 
-	public static void clickConfirmationAlert(WebDriver driver) throws Exception {
+	public static void clickConfirmationAlert(WebDriver driver) throws Exception 
+	{
 		driver.findElement(By.xpath("//button[text()='Click for JS Confirm']")).click();
 		Alert alert1 = driver.switchTo().alert();
 		String alert_text1 = alert1.getText();
@@ -52,9 +56,12 @@ public class Alerts_1 {
 		Thread.sleep(1000);
 		String actual_confirmMsg1 = driver.findElement(By.xpath("//p[2]")).getText();
 		String extected_confirmMsg1 = "You clicked: Ok";
-		if (actual_confirmMsg1.equals(extected_confirmMsg1)) {
+		if (actual_confirmMsg1.equals(extected_confirmMsg1)) 
+		{
 			System.out.println("You clicked on Ok : Test passed...");
-		} else {
+		} 
+		else 
+		{
 			System.out.println("You clicked on Ok : Test failed...");
 		}
 		Thread.sleep(2000);
@@ -68,14 +75,18 @@ public class Alerts_1 {
 		Thread.sleep(1000);
 		String actual_confirmMsg2 = driver.findElement(By.xpath("//p[2]")).getText();
 		String extected_confirmMsg2 = "You clicked: Cancel";
-		if (actual_confirmMsg2.equals(extected_confirmMsg2)) {
+		if (actual_confirmMsg2.equals(extected_confirmMsg2)) 
+		{
 			System.out.println("You clicked on Cancel : Test passed...");
-		} else {
+		} 
+		else 
+		{
 			System.out.println("You clicked on Cancel : Test failed...");
 		}
 	}
 
-	public static void clickPromptAlert(WebDriver driver) throws Exception {
+	public static void clickPromptAlert(WebDriver driver) throws Exception 
+	{
 		driver.findElement(By.xpath("//button[text()='Click for JS Prompt']")).click();
 		Alert alert1 = driver.switchTo().alert();
 		Thread.sleep(500);
@@ -88,7 +99,8 @@ public class Alerts_1 {
 		Thread.sleep(1000);
 		String extected_confirmMsg1 = "You entered: " + input_value1;
 		String actual_confirmMsg1 = driver.findElement(By.xpath("//p[2]")).getText();
-		if (actual_confirmMsg1.equals(extected_confirmMsg1)) {
+		if (actual_confirmMsg1.equals(extected_confirmMsg1)) 
+		{
 			System.out.println("You clicked on Ok : Test passed...");
 		} else {
 			System.out.println("You clicked on Ok : Test failed...");
@@ -104,11 +116,13 @@ public class Alerts_1 {
 		Thread.sleep(1000);
 		String extected_confirmMsg2 = "You entered: null";
 		String actual_confirmMsg2 = driver.findElement(By.xpath("//p[2]")).getText();
-		if (actual_confirmMsg2.equals(extected_confirmMsg2)) {
+		if (actual_confirmMsg2.equals(extected_confirmMsg2)) 
+		{
 			System.out.println("You clicked on Cancel : Test passed...");
-		} else {
+		} 
+		else 
+		{
 			System.out.println("You clicked on Cancel : Test failed...");
 		}
 	}
-
 }

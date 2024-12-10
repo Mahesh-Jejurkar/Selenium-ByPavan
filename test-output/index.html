@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Mahesh\AppData\Local\Temp\testng-eclipse-1937442008\testng-customsuite.xml</span>
+                    <span>C:\Users\Mahesh\AppData\Local\Temp\testng-eclipse--1964725818\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +103,27 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="selenium.Select2LastValue" class="method navigator-link" hash-for-method="select2LastValue">select2LastValue</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="Selenium.Cookies" class="method navigator-link" hash-for-method="addCookie">addCookie</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Selenium.Cookies" class="method navigator-link" hash-for-method="deleteAllCookie">deleteAllCookie</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Selenium.Cookies" class="method navigator-link" hash-for-method="getAllCookies">getAllCookies</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Selenium.Cookies" class="method navigator-link" hash-for-method="getAllCookies2">getAllCookies2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Selenium.Cookies" class="method navigator-link" hash-for-method="getSpecificCookie">getSpecificCookie</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -121,14 +141,42 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">selenium.Select2LastValue</span>
+              <span class="class-name">Selenium.Cookies</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="select2LastValue">
-                  </a> <!-- select2LastValue -->
-                  <span class="method-name">select2LastValue</span>
+                  <a name="addCookie">
+                  </a> <!-- addCookie -->
+                  <span class="method-name">addCookie</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteAllCookie">
+                  </a> <!-- deleteAllCookie -->
+                  <span class="method-name">deleteAllCookie</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getAllCookies">
+                  </a> <!-- getAllCookies -->
+                  <span class="method-name">getAllCookies</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getAllCookies2">
+                  </a> <!-- getAllCookies2 -->
+                  <span class="method-name">getAllCookies2</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getSpecificCookie">
+                  </a> <!-- getSpecificCookie -->
+                  <span class="method-name">getSpecificCookie</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -136,7 +184,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Mahesh\AppData\Local\Temp\testng-eclipse-1937442008\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Mahesh\AppData\Local\Temp\testng-eclipse--1964725818\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -145,7 +193,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;selenium.Select2LastValue&quot;/&gt;
+      &lt;class name=&quot;Selenium.Cookies&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -185,16 +233,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'select2LastValue')
-data.setCell(0, 2, 'selenium.Select2LastValue')
-data.setCell(0, 3, 13018);
+data.setCell(0, 1, 'getAllCookies')
+data.setCell(0, 2, 'Selenium.Cookies')
+data.setCell(0, 3, 81);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'deleteAllCookie')
+data.setCell(1, 2, 'Selenium.Cookies')
+data.setCell(1, 3, 34);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'addCookie')
+data.setCell(2, 2, 'Selenium.Cookies')
+data.setCell(2, 3, 23);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'getSpecificCookie')
+data.setCell(3, 2, 'Selenium.Cookies')
+data.setCell(3, 3, 14);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'getAllCookies2')
+data.setCell(4, 2, 'Selenium.Cookies')
+data.setCell(4, 3, 9);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 13 seconds</span>
+              <span class="suite-total-time">Total running time: 161 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -220,14 +284,34 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">selenium.Select2LastValue</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">select2LastValue</span>
+              <div class="chronological-class-name">Selenium.Cookies</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">getAllCookies</span>
+                <span class="method-start">11193 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addCookie</span>
+                <span class="method-start">11281 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getSpecificCookie</span>
+                <span class="method-start">11306 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteAllCookie</span>
+                <span class="method-start">11322 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getAllCookies2</span>
+                <span class="method-start">11357 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">13032 ms</span>
+                <span class="method-start">11368 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

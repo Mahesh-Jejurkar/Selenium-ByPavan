@@ -6,9 +6,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class GetBoxColor {
-
-	public static void main(String[] args) throws Exception {
+public class GetBoxColor 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		Actions action = new Actions(driver);
@@ -19,9 +20,7 @@ public class GetBoxColor {
 		Thread.sleep(1000);
 		String backgroundColor = tableCell.getCssValue("bgcolor");
 		System.out.println(backgroundColor);
-		
-		
-		
+			
 		Thread.sleep(7000);
 		driver.close();
 	}

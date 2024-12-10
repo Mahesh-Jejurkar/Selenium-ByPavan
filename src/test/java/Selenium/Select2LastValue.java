@@ -1,20 +1,18 @@
 package Selenium;
 
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
-public class Select2LastValue {
-	 	
+public class Select2LastValue 
+{	 	
 	@Test
-	public void select2LastValue() throws Exception {
+	public void select2LastValue() throws Exception 
+	{
 		WebDriver driver = new ChromeDriver();
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		driver.manage().window().maximize();
@@ -30,5 +28,4 @@ public class Select2LastValue {
 		Thread.sleep(9000);
 		driver.close();
 	}
-	
 }

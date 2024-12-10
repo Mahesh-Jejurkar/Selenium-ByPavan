@@ -7,9 +7,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class KeyboardActions_1 {
-
-	public static void main(String[] args) throws Exception {
+public class KeyboardActions_1 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriver driver = new ChromeDriver();
 		Actions action = new Actions(driver);
 		driver.manage().window().maximize();

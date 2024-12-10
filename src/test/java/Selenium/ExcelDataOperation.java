@@ -1,7 +1,9 @@
 package Selenium;
 
-public class ExcelDataOperation extends ExcelUtils{
-	public static void main(String[] args) throws Exception {
+public class ExcelDataOperation extends ExcelUtils
+{
+	public static void main(String[] args) throws Exception 
+	{
 		String filePath = System.getProperty("user.dir")+"\\test-data\\Book1.xlsx";;
 		String sheetName = "Sheet1";
 		String data = "Mahesh";

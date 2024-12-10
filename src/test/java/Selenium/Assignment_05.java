@@ -8,9 +8,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-public class Assignment_05 extends BaseClass{
-
-	public static void main(String[] args) throws Exception{
+public class Assignment_05 extends BaseClass
+{
+	public static void main(String[] args) throws Exception
+	{
 		WebDriver driver = getDriver();
 		JavascriptExecutor js = getJavascriptExecutor();
 		
@@ -23,7 +24,8 @@ public class Assignment_05 extends BaseClass{
 		Select selectColors = new Select(txtarea_colors);
 		List<WebElement> listColors = selectColors.getOptions();
 		System.out.println("No. of colors : "+listColors.size());
-		for(WebElement colors : listColors) {
+		for(WebElement colors : listColors) 
+		{
 			System.out.println(colors.getText());
 		}
 		
@@ -36,7 +38,9 @@ public class Assignment_05 extends BaseClass{
 		
 		List<WebElement> listSelectedColors = selectColors.getAllSelectedOptions();
 		System.out.println("No. of selected colors : "+listSelectedColors.size());
-		for(WebElement selectedColors : listSelectedColors) {
+		
+		for(WebElement selectedColors : listSelectedColors) 
+		{
 			System.out.println(selectedColors.getText());
 		}
 		

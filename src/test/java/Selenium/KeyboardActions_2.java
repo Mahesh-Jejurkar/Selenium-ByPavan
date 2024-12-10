@@ -7,9 +7,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-public class KeyboardActions_2 extends BaseClass{
-
-	public static void main(String[] args) throws Exception{
+public class KeyboardActions_2 extends BaseClass
+{
+	public static void main(String[] args) throws Exception
+	{
 		String text_input = "Lorem ipsum odor amet, consectetuer adipiscing elit. Ridiculus hac tortor fames eros facilisis? Condimentum ullamcorper nullam blandit cursus; curae morbi odio. Interdum himenaeos placerat quis tempor proin. Aliquet ultrices ligula etiam vivamus mattis conubia platea velit. Maecenas elit risus blandit convallis, mus integer conubia posuere. Sociosqu ultricies odio diam praesent montes tincidunt netus elementum. Mus dictum donec fringilla vestibulum ad."; 
 		WebDriver driver = getDriver();
 		JavascriptExecutor js = getJavascriptExecutor();
@@ -39,7 +40,6 @@ public class KeyboardActions_2 extends BaseClass{
 		
 		//Ctrl + V	=> Paste the text from clipboard.
 		act.keyDown(Keys.CONTROL).sendKeys("v").keyUp(Keys.CONTROL).build().perform();
-		
 		
 		closeDriver();
 

@@ -14,12 +14,14 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class Demo_HandleWindow {
+public class Demo_HandleWindow 
+{
 	WebDriver driver;
 	
 	
 	@BeforeClass
-	public void setUp() {
+	public void setUp() 
+	{
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
@@ -27,13 +29,15 @@ public class Demo_HandleWindow {
 	}
 	
 	@AfterClass
-	public void tearDown() throws Exception {
+	public void tearDown() throws Exception 
+	{
 		Thread.sleep(7000);
 		driver.close();
 	}
 	
 	@Test
-	public void testBrokenLinks() {
+	public void testBrokenLinks() 
+	{
 		String homepage = "http://www.deadlinkcity.com/";
 		HttpURLConnection huc = null;
 		int responseCode = 0;
@@ -42,16 +46,19 @@ public class Demo_HandleWindow {
 		List<WebElement> allLinks = driver.findElements(By.tagName("a"));
 		Iterator<WebElement> it = allLinks.iterator();
 		
-		while(it.hasNext()) {
+		while(it.hasNext()) 
+		{
 			String url = it.next().getAttribute("href");
 			//System.out.println(url);
 			
-			if(url == null || url.isEmpty()) {
+			if(url == null || url.isEmpty()) 
+			{
 				System.out.println("URL is empty");
 				continue;
 			}
 			
-			if(!url.startsWith(homepage)) {
+			if(!url.startsWith(homepage)) 
+			{
 				System.out.println("URL is belongs to another domain, hence skipping...");
 				continue;
 			}
@@ -60,17 +67,20 @@ public class Demo_HandleWindow {
 					huc = (HttpURLConnection)(new URL(url)).openConnection();
 					huc.connect();
 					responseCode = huc.getResponseCode();
-					if(responseCode >= 400) {
+					if(responseCode >= 400) 
+					{
 						System.out.println(url+" is a broken link.");
-					}else {
+					}
+					else 
+					{
 						System.out.println(url+" is valid link");
 					}
 				
-			}catch(Exception e) {
+			}
+			catch(Exception e) 
+			{
 				e.printStackTrace();
 			}
 		}
-		
 	}
-
 }

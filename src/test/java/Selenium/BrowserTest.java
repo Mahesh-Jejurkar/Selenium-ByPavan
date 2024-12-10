@@ -11,19 +11,25 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class BrowserTest {
-
+public class BrowserTest 
+{
 	static String browser = "Chrome";
 	static WebDriver driver;
 
-	public static void main(String[] args) throws Exception {
-		if (browser.equals("Edge")) {
+	public static void main(String[] args) throws Exception 
+	{
+		if (browser.equals("Edge")) 
+		{
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
-		} else if (browser.equals("Firefox")) {
+		} 
+		else if (browser.equals("Firefox")) 
+		{
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
-		} else if (browser.equals("Chrome")) {
+		} 
+		else if (browser.equals("Chrome")) 
+		{
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		}

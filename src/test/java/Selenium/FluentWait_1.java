@@ -11,9 +11,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 
-public class FluentWait_1 {
-
-	public static void main(String[] args) throws Exception {
+public class FluentWait_1 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		
@@ -32,8 +33,8 @@ public class FluentWait_1 {
 
 	}
 	
-	
-	public static WebElement waitForElementTobeVisible(WebDriver driver, By locator) {
+	public static WebElement waitForElementTobeVisible(WebDriver driver, By locator) 
+	{
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
 		.withTimeout(Duration.ofSeconds(20))
 		.pollingEvery(Duration.ofSeconds(5))

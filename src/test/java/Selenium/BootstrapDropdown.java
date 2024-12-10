@@ -7,9 +7,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class BootstrapDropdown {
-
-	public static void main(String[] args) throws Exception {
+public class BootstrapDropdown 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		
@@ -17,6 +18,7 @@ public class BootstrapDropdown {
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//div[contains(@class,'product-category-wrap')]")).click();
 		Thread.sleep(2000);
+		
 		List<WebElement> list_producttype = driver.findElements(By.xpath("//ul[@id='productType']//li"));
 		selectOptionsFromDropDown(list_producttype, "Housing Loans");
 		Thread.sleep(2000);
@@ -30,9 +32,12 @@ public class BootstrapDropdown {
 		driver.close();
 	}
 	
-	public static void selectOptionsFromDropDown(List<WebElement> list_alloptions, String value) {
-		for(WebElement products : list_alloptions) {
-			if(products.getText().equals(value)) {
+	public static void selectOptionsFromDropDown(List<WebElement> list_alloptions, String value) 
+	{
+		for(WebElement products : list_alloptions) 
+		{
+			if(products.getText().equals(value)) 
+			{
 				products.click();
 				break;
 			}

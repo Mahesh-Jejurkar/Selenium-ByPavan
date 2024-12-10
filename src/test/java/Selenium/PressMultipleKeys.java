@@ -14,9 +14,10 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 
 
-public class PressMultipleKeys {
-
-	public static void main(String[] args) throws InterruptedException {
+public class PressMultipleKeys 
+{
+	public static void main(String[] args) throws InterruptedException 
+	{
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		Actions action = new Actions(driver);
@@ -58,9 +59,12 @@ public class PressMultipleKeys {
 		action.moveToElement(textarea2).keyDown(Keys.CONTROL).keyDown("V").keyUp(Keys.CONTROL).build().perform();
 		Thread.sleep(1000);
 		
-		if(textarea1.getAttribute("value").equals(textarea2.getAttribute("value"))) {
+		if(textarea1.getAttribute("value").equals(textarea2.getAttribute("value"))) 
+		{
 			System.out.println("Text copied and pasted successfully and are identical...");
-		}else {
+		}
+		else 
+		{
 			System.out.println("Text copy and paste failed and are not identical...");
 		}
 	

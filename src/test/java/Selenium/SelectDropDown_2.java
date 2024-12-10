@@ -7,9 +7,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-public class SelectDropDown_2 extends BaseClass{
-
-	public static void main(String[] args) throws Exception{
+public class SelectDropDown_2 extends BaseClass
+{
+	public static void main(String[] args) throws Exception
+	{
 		WebDriver driver = getDriver();
 		driver.get("https://testautomationpractice.blogspot.com/");
 		Thread.sleep(2000);
@@ -24,22 +25,27 @@ public class SelectDropDown_2 extends BaseClass{
 		List<WebElement> listCountry = select_country.getOptions();
 			
 		
-		for( int i=0; i<expectedCountry.length; i++) {
+		for( int i=0; i<expectedCountry.length; i++) 
+		{
 			CountryFound = false;
 			 String currentCountry = expectedCountry[i];
-			 for(int j=0; j<listCountry.size(); j++) {
-				 if(currentCountry.equals(listCountry.get(j).getText().toString())) {
+			 for(int j=0; j<listCountry.size(); j++) 
+			 {
+				 if(currentCountry.equals(listCountry.get(j).getText().toString())) 
+				 {
 					CountryFound = true;
 					break;
 				 }
 			 }
 			 
-			 if(CountryFound==true) {
+			 if(CountryFound==true) 
+			 {
 				 System.out.println(currentCountry+" is found.");
-			 }else {
+			 }
+			 else 
+			 {
 				 System.out.println(currentCountry+" is not found.");
 			 }
 		}
 	}
-
 }

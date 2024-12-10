@@ -1,9 +1,9 @@
 package JavaPrograms;
 
-public class FoorLoopDemo {
-
-	public static void main(String[] args) {
-
+public class FoorLoopDemo 
+{
+	public static void main(String[] args) 
+	{
 		int[] a = new int[5];
 		a[0] = 1;
 		a[1] = 2;
@@ -13,18 +13,21 @@ public class FoorLoopDemo {
 		System.out.println(a[1]);
 
 		System.out.println("For loop");
-		for (int i = 0; i < a.length; i++) {
+		for (int i = 0; i < a.length; i++) 
+		{
 			System.out.println(a[i]);
 		}
 
 		System.out.println("For each loop");
-		for (int aa : a) {
+		for (int aa : a) 
+		{
 			System.out.println(aa);
 		}
 
 		String name[] = { "Mahesh", "Jejurkar", "Pune" };
 
-		for (String n : name) {
+		for (String n : name) 
+		{
 			System.out.println(n);
 		}
 	}

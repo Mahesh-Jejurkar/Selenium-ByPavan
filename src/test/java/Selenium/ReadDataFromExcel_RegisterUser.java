@@ -12,9 +12,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class ReadDataFromExcel_RegisterUser {
-
-	public static void main(String[] args) throws Exception {
+public class ReadDataFromExcel_RegisterUser 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "\\input-files\\Book1.xlsx");
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 		XSSFSheet sheet = workbook.getSheet("UserData");
@@ -28,7 +29,8 @@ public class ReadDataFromExcel_RegisterUser {
 		driver.get("https://tutorialsninja.com/demo/index.php?route=account/register");
 		Thread.sleep(2000);
 
-		for (int r = 1; r < noOfRow; r++) {
+		for (int r = 1; r < noOfRow; r++) 
+		{
 			XSSFRow current_row = sheet.getRow(r);
 			String firstname = current_row.getCell(0).getStringCellValue();
 			String lastname = current_row.getCell(1).getStringCellValue();
@@ -55,5 +57,4 @@ public class ReadDataFromExcel_RegisterUser {
 		Thread.sleep(9000);
 		driver.close();
 	}
-
 }

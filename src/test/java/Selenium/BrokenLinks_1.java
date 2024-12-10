@@ -10,9 +10,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class BrokenLinks_1 {
-
-	public static void main(String[] args) throws Exception {
+public class BrokenLinks_1 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		String homepage = "http://www.deadlinkcity.com/";
 		String link_name; 
 		String href_value;
@@ -33,18 +34,21 @@ public class BrokenLinks_1 {
 
 		List<WebElement> alllinks = driver.findElements(By.tagName("a"));
 
-		for (WebElement links : alllinks) {
+		for (WebElement links : alllinks) 
+		{
 			link_name = links.getText();
 			href_value = links.getAttribute("href");
 
-			if (href_value == null || href_value.isEmpty()) {
+			if (href_value == null || href_value.isEmpty()) 
+			{
 				countEmptyLink++;
 				System.out.println("Link is empty...");
 				System.out.println("------------------------------------------------");
 				continue;
 			}
 
-			if (!href_value.startsWith(homepage)) {
+			if (!href_value.startsWith(homepage)) 
+			{
 				countOtherDomainLink++;
 				System.out.println("Link Text: " + link_name);
 				System.out.println("href Value: " + href_value);
@@ -58,14 +62,17 @@ public class BrokenLinks_1 {
 				conn = (HttpURLConnection) link_url.openConnection();
 				conn.connect();
 				responseCode = conn.getResponseCode();
-				if (responseCode >= 400) {
+				if (responseCode >= 400) 
+				{
 					countBrokenLink++;
 					System.out.println("Link Text: " + link_name);
 					System.out.println("href Value: " + href_value);
 					System.out.println("Response Code: " + responseCode);
 					System.out.println("Link is broken link...");
 					System.out.println("------------------------------------------------");
-				} else {
+				} 
+				else 
+				{
 					countValidLink++;
 					System.out.println("Link Text: " + link_name);
 					System.out.println("href Value: " + href_value);
@@ -73,7 +80,9 @@ public class BrokenLinks_1 {
 					System.out.println("Link is valid link...");
 					System.out.println("------------------------------------------------");
 				}
-			} catch (Exception e) {
+			} 
+			catch (Exception e) 
+			{
 				System.out.println(e);
 			}
 		}
@@ -88,5 +97,4 @@ public class BrokenLinks_1 {
 		driver.close();
 
 	}
-
 }

@@ -8,9 +8,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class ReadWebTable_2 {
-
-	public static void main(String[] args) throws Exception {
+public class ReadWebTable_2 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriver driver = new ChromeDriver();
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -32,13 +33,13 @@ public class ReadWebTable_2 {
 		int noOfRows = driver.findElements(By.xpath("//div[@class='orangehrm-container']//div[@role='row']")).size();
 		System.out.println(noOfRows);
 		
-		for(int r=1; r<=noOfRows; r++) {
+		for(int r=1; r<=noOfRows; r++) 
+		{
 			String username = driver.findElement(By.xpath("//div[@class='orangehrm-container']//div[@class='oxd-table-body']/div["+r+"]/div/div[2]")).getText();
 			String status = driver.findElement(By.xpath("//div[@class='orangehrm-container']//div[@class='oxd-table-body']/div["+r+"]/div/div[5]")).getText();
 			
 			System.out.println(username+"\t"+status);
 		}
-		
 		
 		Thread.sleep(5000);
 		driver.close();

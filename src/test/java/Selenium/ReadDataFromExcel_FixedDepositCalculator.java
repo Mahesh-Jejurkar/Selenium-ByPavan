@@ -15,9 +15,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class ReadDataFromExcel_FixedDepositCalculator {
+public class ReadDataFromExcel_FixedDepositCalculator 
+{
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws Exception 
+	{
 		FileInputStream file = new FileInputStream(System.getProperty("user.dir") + "\\input-files\\FixedDepositCalculator_InputData.xlsx");
 		XSSFWorkbook workbook = new XSSFWorkbook(file);
 		XSSFSheet sheet = workbook.getSheetAt(0);
@@ -33,7 +35,8 @@ public class ReadDataFromExcel_FixedDepositCalculator {
 		WebElement element_text = driver.findElement(By.xpath("//span[text()='Fixed Deposit Calculator:']"));
 		js.executeScript("arguments[0].scrollIntoView()", element_text);
 
-		for (int i = 1; i <= rowCount; i++) {
+		for (int i = 1; i <= rowCount; i++) 
+		{
 			XSSFRow currentRow = sheet.getRow(i);
 
 			int principalValue = (int) currentRow.getCell(0).getNumericCellValue();
@@ -63,14 +66,19 @@ public class ReadDataFromExcel_FixedDepositCalculator {
 			System.out.print(principalValue + "\t" + rateOfInterest + "\t" + tenure + "\t" + tenurePeriod + "\t"
 					+ frequency + "\t" + expectedMaturityValue + "\n");
 
-			if (actualMaturityValue == expectedMaturityValue) {
+			if (actualMaturityValue == expectedMaturityValue) 
+			{
 				System.out.println("Test Passed...");
-			} else {
+			} 
+			else 
+			{
 				System.out.println("Test Failed...");
 			}
+			
 			Thread.sleep(5000);
 			driver.findElement(By.xpath("//img[@class='PL5']")).click();
 		}
+		
 		workbook.close();
 		file.close();
 		Thread.sleep(5000);

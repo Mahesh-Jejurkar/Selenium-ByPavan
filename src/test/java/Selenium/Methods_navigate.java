@@ -4,9 +4,10 @@ import java.net.URL;
 
 import org.openqa.selenium.WebDriver;
 
-public class Methods_navigate extends BaseClass{
-	
-	public static void main(String[] args) throws Exception {
+public class Methods_navigate extends BaseClass
+{	
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriver driver = getDriver();
 		
 	    URL url = new URL("https://demo.opencart.com/");
@@ -20,9 +21,7 @@ public class Methods_navigate extends BaseClass{
 		driver.navigate().forward();
 		Thread.sleep(4000);
 		driver.navigate().refresh();
-		
-		
-		
+	
 		closeDriver();
 	}
 }

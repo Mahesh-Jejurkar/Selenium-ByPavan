@@ -10,9 +10,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 
-public class Methods_get extends BaseClass {
-
-	public static void main(String[] args) throws Exception {
+public class Methods_get extends BaseClass 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriver driver = getDriver();
 		JavascriptExecutor js = getJavascriptExecutor();
 		

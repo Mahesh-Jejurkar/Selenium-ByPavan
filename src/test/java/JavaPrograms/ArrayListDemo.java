@@ -2,9 +2,10 @@ package JavaPrograms;
 
 import java.util.ArrayList;
 
-public class ArrayListDemo {
-
-	public static void main(String[] args) {
+public class ArrayListDemo 
+{
+	public static void main(String[] args) 
+	{
 		ArrayList<String> names = new ArrayList<String>();
 		names.add("Mahesh");
 		names.add("Jejurkar");
@@ -14,12 +15,14 @@ public class ArrayListDemo {
 		System.out.println(names);
 
 		System.out.println("For loop : ");
-		for (String n : names) {
+		for (String n : names) 
+		{
 			System.out.println(n);
 		}
 
 		System.out.println("For each loop : ");
-		for (int i = 0; i < names.size(); i++) {
+		for (int i = 0; i < names.size(); i++) 
+		{
 			System.out.println(names.get(i));
 		}
 

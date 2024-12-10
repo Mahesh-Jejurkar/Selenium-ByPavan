@@ -4,9 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WindowType;
 
-public class TabsAndWindows extends BaseClass{
-
-	public static void main(String[] args) throws Exception{
+public class TabsAndWindows extends BaseClass
+{
+	public static void main(String[] args) throws Exception
+	{
 		WebDriver driver = getDriver();
 		
 		driver.get("https://demo.opencart.com/");

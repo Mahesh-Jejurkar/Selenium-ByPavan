@@ -2,9 +2,10 @@ package JavaPrograms;
 
 import java.util.ArrayList;
 
-public class WrapperClasses {
-
-	public static void main(String[] args) {
+public class WrapperClasses 
+{
+	public static void main(String[] args) 
+	{
 		// Primitive
 		int a = 10;
 		double b = 21.23;
@@ -28,5 +29,4 @@ public class WrapperClasses {
 		int value = aa;
 		System.out.println(value);
 	}
-
 }

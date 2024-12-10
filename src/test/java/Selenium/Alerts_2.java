@@ -4,8 +4,10 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class Alerts_2 extends BaseClass{
-	public static void main(String[] args) throws Exception {
+public class Alerts_2 extends BaseClass
+{
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriver driver = getDriver();
 		driver.get("https://demo.automationtesting.in/Alerts.html");
 		Thread.sleep(2000);
@@ -44,5 +46,4 @@ public class Alerts_2 extends BaseClass{
 		
 		closeDriver();
 	}
-
 }

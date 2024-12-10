@@ -5,9 +5,10 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class PageScrolling_1 extends BaseClass {
-
-	public static void main(String[] args) throws Exception {
+public class PageScrolling_1 extends BaseClass 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriver driver = getDriver();
 		JavascriptExecutor js = getJavascriptExecutor();
 
@@ -38,8 +39,6 @@ public class PageScrolling_1 extends BaseClass {
 		Thread.sleep(2000);
 		js.executeScript("document.body.style.zoom='50%'");
 
-		
 		closeDriver();
 	}
-
 }

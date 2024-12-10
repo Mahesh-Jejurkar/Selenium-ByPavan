@@ -2,10 +2,10 @@ package JavaPrograms;
 
 import java.util.HashMap;
 
-public class HashmapDemo {
-
-	public static void main(String[] args) {
-
+public class HashmapDemo 
+{
+	public static void main(String[] args) 
+	{
 		HashMap<Integer, String> hm = new HashMap<Integer, String>();
 		hm.put(1, "One@One");
 		hm.put(2, "Two@Two");
@@ -20,7 +20,8 @@ public class HashmapDemo {
 
 		System.out.println(hm.size() + "\n");
 
-		for (int i = 1; i <= 10; i++) {
+		for (int i = 1; i <= 10; i++) 
+		{
 			String hmdata = hm.get(i);
 			String hmdataArray[] = hmdata.split("@");
 

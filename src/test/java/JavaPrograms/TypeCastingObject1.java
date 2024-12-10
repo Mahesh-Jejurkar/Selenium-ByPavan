@@ -1,25 +1,30 @@
 package JavaPrograms;
 
-class Parent3{
+class Parent3
+{
 	String name = "John";
 	
-	void m1() {
+	void m1() 
+	{
 		System.out.println("This is m1() from parent..");
 	}
 }
 
-class Child3 extends Parent3{
+class Child3 extends Parent3
+{
 	int id=101;
 	
-	void m2() {
+	void m2() 
+	{
 		System.out.println("This is m2() from child..");
 	}
 }
 
 
-public class TypeCastingObject1 {
-
-	public static void main(String[] args) {
+public class TypeCastingObject1 
+{
+	public static void main(String[] args) 
+	{
 		/*
 		 * child3 c = new child3(); System.out.println(c.name);//Parent class variable.
 		 * c.m1(); //Parent class method.
@@ -42,5 +47,4 @@ public class TypeCastingObject1 {
 		System.out.println(c.id);//child
 		c.m2();//child
 	}
-
 }

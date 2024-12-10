@@ -8,8 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class ReadWebTable_1 {
-
+public class ReadWebTable_1 
+{
 	public static void main(String[] args) throws Exception{
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -24,7 +24,8 @@ public class ReadWebTable_1 {
 		
 		int noOfRows = driver.findElements(By.xpath("//table[@name='BookTable']//tbody//tr")).size();
 		
-		for(int r=2; r<=noOfRows; r++) {
+		for(int r=2; r<=noOfRows; r++) 
+		{
 			WebElement element_BookName = driver.findElement(By.xpath("//table[@name='BookTable']//tbody//tr["+r+"]//td[1]"));
 			String BookName = element_BookName.getText();
 			changeColor(driver, element_BookName);
@@ -48,7 +49,8 @@ public class ReadWebTable_1 {
 		driver.close();
 	}
 	
-	public static void changeColor(WebDriver driver , WebElement element) throws Exception {
+	public static void changeColor(WebDriver driver , WebElement element) throws Exception 
+	{
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].style.backgroundColor='rgba(0, 255, 0, 1)'", element);
 		Thread.sleep(1000);

@@ -17,9 +17,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class WriteDataToExcel_1 {
-
-	public static void main(String[] args) throws Exception {
+public class WriteDataToExcel_1 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		int r = 1;
 		FileOutputStream fos = new FileOutputStream(
 				System.getProperty("user.dir") + "\\input-files\\OpenCartOutData.xlsx");
@@ -54,7 +55,8 @@ public class WriteDataToExcel_1 {
 		Thread.sleep(2000);
 		List<WebElement> alllinks = driver.findElements(By.tagName("a"));
 
-		for (WebElement link : alllinks) {
+		for (WebElement link : alllinks) 
+		{
 			String link_text = link.getText();
 			String link_url = link.getAttribute("href");
 
@@ -77,5 +79,4 @@ public class WriteDataToExcel_1 {
 		Thread.sleep(9000);
 		driver.close();
 	}
-
 }

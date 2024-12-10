@@ -6,9 +6,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class ConditionalCommands2 {
-
-	public static void main(String[] args) throws Exception {
+public class ConditionalCommands2 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -28,6 +29,5 @@ public class ConditionalCommands2 {
 		
 		Thread.sleep(10000);
 		driver.close();
-
 	}
 }

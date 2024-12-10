@@ -9,9 +9,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class GoogleSearch3 {
-
-	public static void main(String[] args) throws Exception {
+public class GoogleSearch3 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
@@ -22,13 +23,16 @@ public class GoogleSearch3 {
 
 		List<WebElement> webelement_names = driver.findElements(By.xpath("//ul[@role='listbox']/li//span"));
 
-		for (WebElement name : webelement_names) {
+		for (WebElement name : webelement_names) 
+		{
 			System.out.println(name.getText());
 		}
 
-		for (WebElement name : webelement_names) {
+		for (WebElement name : webelement_names) 
+		{
 			String curretText = name.getText();
-			if (curretText.equalsIgnoreCase("infosys careers")) {
+			if (curretText.equalsIgnoreCase("infosys careers")) 
+			{
 				name.click();
 				break;
 			}
@@ -38,3 +42,4 @@ public class GoogleSearch3 {
 		driver.close();
 	}
 }
+

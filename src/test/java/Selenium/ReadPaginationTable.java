@@ -8,9 +8,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class ReadPaginationTable {
-
-	public static void main(String[] args) throws Exception {
+public class ReadPaginationTable 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -25,7 +26,8 @@ public class ReadPaginationTable {
 		int noOfPages = driver.findElements(By.xpath("//ul[@id='pagination']//li//a")).size();
 		System.out.println(noOfPages);
 
-		for (int p = 1; p <= noOfPages; p++) {
+		for (int p = 1; p <= noOfPages; p++) 
+		{
 			driver.findElement(By.xpath("//ul[@id='pagination']//li[" + p + "]//a")).click();
 			int noOfRows = driver.findElements(By.xpath("//table[@id='productTable']//tbody//tr")).size();
 			for (int r = 1; r <= noOfRows; r++) {
@@ -56,7 +58,8 @@ public class ReadPaginationTable {
 		}
 	}
 
-	public static void changeColor(WebDriver driver, WebElement element) throws Exception {
+	public static void changeColor(WebDriver driver, WebElement element) throws Exception 
+	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].style.backgroundColor='rgba(0, 255, 0, 1)'", element);
 		Thread.sleep(1000);

@@ -1,9 +1,11 @@
 package JavaPrograms;
 
 
-public class VariablesDemo {
+public class VariablesDemo 
+{
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		char grade = 'A';
 		String grade2 = "A";
 		System.out.println(grade);
@@ -43,6 +45,5 @@ public class VariablesDemo {
 		
 		String vote=(age>18)?"Eligible":"Not Eligible";
 		System.out.println(vote);
-		
 	}
 }

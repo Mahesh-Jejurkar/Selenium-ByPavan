@@ -7,9 +7,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-public class Assignment_07 extends BaseClass {
-
-	public static void main(String[] args) throws Exception {
+public class Assignment_07 extends BaseClass 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriver driver = getDriver();
 		Actions action = getActions();
 
@@ -22,8 +23,10 @@ public class Assignment_07 extends BaseClass {
 		List<WebElement> targetItems = driver.findElements(By.xpath("//div[@class='span12']//div[1]/table//table//ol"));
 		int targetItemsCount = targetItems.size();
 
-		for (int s = 0; s < sourceItemsCount; s++) {
-			for (int t = 0; t < targetItemsCount; t++) {
+		for (int s = 0; s < sourceItemsCount; s++) 
+		{
+			for (int t = 0; t < targetItemsCount; t++) 
+			{
 				action.dragAndDrop(sourceItems.get(s), targetItems.get(t)).build().perform();
 				Thread.sleep(1000);
 			}

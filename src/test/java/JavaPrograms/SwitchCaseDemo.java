@@ -1,14 +1,15 @@
 package JavaPrograms;
 
-public class SwitchCaseDemo {
-
-	public static void main(String[] args) {
+public class SwitchCaseDemo 
+{
+	public static void main(String[] args) 
+	{
 		String no = "Two";
 		switch (no) {
 		case "One":
 			System.out.println("One");
 			break;
-
+			
 		case "Two":
 			System.out.println("Two");
 			break;

@@ -6,7 +6,8 @@ import org.apache.poi.ss.usermodel.FillPatternType;
 import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.xssf.usermodel.*;
 
-public class ExcelUtils {
+public class ExcelUtils 
+{
 	static FileInputStream fis;
 	static FileOutputStream fos;
 	static XSSFWorkbook workbook;
@@ -16,7 +17,8 @@ public class ExcelUtils {
 	static XSSFCellStyle style;
 	static String ct;
 
-	public static int getRowCount(String filePath, String sheetName) throws Exception {
+	public static int getRowCount(String filePath, String sheetName) throws Exception 
+	{
 		fis = new FileInputStream(filePath);
 		workbook = new XSSFWorkbook(fis);
 		sheet = workbook.getSheet(sheetName);
@@ -26,7 +28,8 @@ public class ExcelUtils {
 		return rowCount;
 	}
 
-	public static int getCellCount(String filePath, String sheetName, int rowNo) throws Exception {
+	public static int getCellCount(String filePath, String sheetName, int rowNo) throws Exception 
+	{
 		fis = new FileInputStream(filePath);
 		workbook = new XSSFWorkbook(fis);
 		sheet = workbook.getSheet(sheetName);
@@ -36,7 +39,8 @@ public class ExcelUtils {
 		return cellCount;
 	}
 
-	public static String getCellData(String filePath, String sheetName, int rowNo, int cellNo) throws IOException {
+	public static String getCellData(String filePath, String sheetName, int rowNo, int cellNo) throws IOException 
+	{
 		fis = new FileInputStream(filePath);
 		workbook = new XSSFWorkbook(fis);
 		sheet = workbook.getSheet(sheetName);
@@ -48,16 +52,19 @@ public class ExcelUtils {
 		return data;
 	}
 
-	public static void getAllCellData(String filePath, String sheetName) throws Exception {
+	public static void getAllCellData(String filePath, String sheetName) throws Exception 
+	{
 		fis = new FileInputStream(filePath);
 		workbook = new XSSFWorkbook(fis);
 		sheet = workbook.getSheet(sheetName);
 		int rowCount = sheet.getPhysicalNumberOfRows();
 
-		for (int i = 0; i < rowCount; i++) {
+		for (int i = 0; i < rowCount; i++) 
+		{
 			row = sheet.getRow(i);
 			int cellCount = row.getPhysicalNumberOfCells();
-			for (int j = 0; j < cellCount; j++) {
+			for (int j = 0; j < cellCount; j++) 
+			{
 				cell = row.getCell(j);
 				System.out.print(cell.toString() + "\t");
 			}
@@ -69,7 +76,8 @@ public class ExcelUtils {
 	}
 
 	public static boolean setExistingCellData_update(String filePath, String sheetName, int rowNo, int cellNo,
-			String data) throws Exception {
+			String data) throws Exception 
+	{
 		fis = new FileInputStream(filePath);
 		workbook = new XSSFWorkbook(fis);
 		sheet = workbook.getSheet(sheetName);
@@ -87,7 +95,8 @@ public class ExcelUtils {
 	}
 
 	public static boolean setNewCellData(String filePath, String sheetName, int rowNo, int cellNo, String data)
-			throws Exception {
+			throws Exception 
+	{
 		fis = new FileInputStream(filePath);
 		workbook = new XSSFWorkbook(fis);
 		sheet = workbook.getSheet(sheetName);
@@ -104,7 +113,8 @@ public class ExcelUtils {
 		return true;
 	}
 
-	public static String getCellType(String filePath, String sheetName, int rowNo, int cellNo) throws Exception {
+	public static String getCellType(String filePath, String sheetName, int rowNo, int cellNo) throws Exception 
+	{
 		fis = new FileInputStream(filePath);
 		workbook = new XSSFWorkbook(fis);
 		sheet = workbook.getSheet("Sheet1");
@@ -114,7 +124,8 @@ public class ExcelUtils {
 		return ct;
 	}
 
-	public static boolean fillGreenColor(String filePath, String sheetName, int rowNo, int cellNo) throws Exception {
+	public static boolean fillGreenColor(String filePath, String sheetName, int rowNo, int cellNo) throws Exception 
+	{
 		fis = new FileInputStream(filePath);
 		workbook = new XSSFWorkbook(fis);
 		sheet = workbook.getSheet("Sheet1");
@@ -133,7 +144,8 @@ public class ExcelUtils {
 		return true;
 	}
 
-	public static boolean fillRedColor(String filePath, String sheetName, int rowNo, int cellNo) throws Exception {
+	public static boolean fillRedColor(String filePath, String sheetName, int rowNo, int cellNo) throws Exception 
+	{
 		fis = new FileInputStream(filePath);
 		workbook = new XSSFWorkbook(fis);
 		sheet = workbook.getSheet("Sheet1");

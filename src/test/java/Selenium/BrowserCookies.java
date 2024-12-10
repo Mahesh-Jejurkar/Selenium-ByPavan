@@ -8,9 +8,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class BrowserCookies {
-
-	public static void main(String[] args) throws Exception {
+public class BrowserCookies 
+{
+	public static void main(String[] args) throws Exception 
+	{
 		WebDriverManager.chromedriver().setup();
 
 		WebDriver driver = new ChromeDriver();
@@ -23,7 +24,8 @@ public class BrowserCookies {
 		Set<Cookie> cookies = driver.manage().getCookies();
 		System.out.println(cookies.size());
 
-		for (Cookie c : cookies) {
+		for (Cookie c : cookies) 
+		{
 			System.out.println(c.getName() + " : " + c.getValue());
 		}
 
@@ -32,7 +34,8 @@ public class BrowserCookies {
 		cookies = driver.manage().getCookies();
 		System.out.println(cookies.size());
 
-		for (Cookie c : cookies) {
+		for (Cookie c : cookies) 
+		{
 			System.out.println(c.getName() + " : " + c.getValue());
 		}
 
@@ -41,7 +44,8 @@ public class BrowserCookies {
 		cookies = driver.manage().getCookies();
 		System.out.println(cookies.size());
 
-		for (Cookie c : cookies) {
+		for (Cookie c : cookies) 
+		{
 			System.out.println(c.getName() + " : " + c.getValue());
 		}
 

@@ -10,9 +10,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-public class OpenLinkInNewTab_1 extends BaseClass{
-
-	public static void main(String[] args) throws Exception{
+public class OpenLinkInNewTab_1 extends BaseClass
+{
+	public static void main(String[] args) throws Exception
+	{
 		WebDriver driver = getDriver();
 		JavascriptExecutor js = getJavascriptExecutor();
 		
@@ -30,20 +31,23 @@ public class OpenLinkInNewTab_1 extends BaseClass{
 		
 		Set<String> handles = driver.getWindowHandles();
 		Iterator<String> itr_handles = handles.iterator();
-		while(itr_handles.hasNext()) {
+		
+		while(itr_handles.hasNext()) 
+		{
 			String currentHandle = itr_handles.next();
 			driver.switchTo().window(currentHandle);
 			String title = driver.getTitle();
-			if(title.equals("OrangeHRM")) {
+			if(title.equals("OrangeHRM")) 
+			{
 				break;
 			}
 		}
+		
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//input[@name='username']")).sendKeys("Admin");
 		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("admin123");
 		Thread.sleep(500);
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
-		
 		
 		closeDriver();
 	}

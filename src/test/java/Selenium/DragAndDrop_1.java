@@ -5,9 +5,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-public class DragAndDrop_1 extends BaseClass{
-
-	public static void main(String[] args) throws Exception{
+public class DragAndDrop_1 extends BaseClass
+{
+	public static void main(String[] args) throws Exception
+	{
 		WebDriver driver = getDriver();
 		Actions action = getActions();
 		
